@@ -142,17 +142,16 @@
                                                 class="header_nav_content d-flex flex-row align-items-center justify-content-start">
                                                 <nav class="main_nav">
                                                     <ul>
-                                                        <li class="active"><a href="index.html">Home</a></li>
-                                                        <li><a href="Facilities.html">Facilities</a></li>
-                                                        <li><a href="contactus.html">Contact Us</a></li>
-                                                        <li><a href="Achievements.php">Achievements</a></li>
-                                                        <li><a href="Achievements.php">Scoring</a></li>
-                                                        <li><a href="gallary.html">Gallery</a></li>
+                                                        <li class="active"><a href="/">Home</a></li>
+                                                        <li><a href="/facilities">Facilities</a></li>
+                                                        <li><a href="/contact">Contact Us</a></li>
+                                                        <li><a href="/achievements">Achievements</a></li> 
+                                                        <li><a href="/gallery">Gallery</a></li>
                                                     </ul>
                                                 </nav>
                                                 <div class="header_extra ml-auto">
                                                     <a class="TA-login"
-                                                        href="MainControlPanel/login.php">Teachers/Admin Login </a>
+                                                        href="/login">Teachers/Admin Login </a>
                                                     <div class="header_search"><i class="fa fa-search"
                                                             aria-hidden="true"></i></div>
 
@@ -220,7 +219,7 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/cricket.jpg" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department Cricket
+                        <div class="intro_title"><a href="/register">All Department Cricket
                             </a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
                         <style>
@@ -228,7 +227,7 @@
                                 color: blue;
                             }
                         </style>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
 
 
@@ -240,10 +239,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/football.jpg" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department FootBall
+                        <div class="intro_title"><a href="/register">All Department FootBall
                             </a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -252,10 +251,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/basketball.webp" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department BasketBall
+                        <div class="intro_title"><a href="/register">All Department BasketBall
                             </a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -264,10 +263,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/tableteenis.webp" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department
+                        <div class="intro_title"><a href="/register">All Department
                                 TableTennis </a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -276,10 +275,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/batbitan.webp" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department Badminton
+                        <div class="intro_title"><a href="/register">All Department Badminton
                             </a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -288,10 +287,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/thugofwar.webp" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department Tug Of
+                        <div class="intro_title"><a href="/register">All Department Tug Of
                                 WAR</a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -300,10 +299,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/marathon.jpg" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department
+                        <div class="intro_title"><a href="/register">All Department
                                 Marathon</a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -312,10 +311,10 @@
                 <div class="intro_item">
                     <div class="intro_image"><img src="images/Main-Sports/vollball.jpg" alt=""></div>
                     <div class="intro_body">
-                        <div class="intro_title"><a href="student%20registration/index.html">All Department
+                        <div class="intro_title"><a href="/register">All Department
                                 Volleyball</a></div>
                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a>
+                        <div class="intro_title"><a href="/register"> <b>Register Now</b></a>
                         </div>
                     </div>
                 </div>
@@ -685,9 +684,9 @@
                                         Copyright &copy;
                                         <script>
                                             document.write(new Date().getFullYear());
-                                        </script> All rights reserved | This template is made with <i
-                                            class="fa fa-heart-o" aria-hidden="true"></i> by <a href=""
-                                            target="_blank">BilzZ</a>
+                                        </script> All rights reserved | This is made with <i
+                                            class="fa fa-heart-o" aria-hidden="true"></i> <a href=""
+                                            target="_blank">BTECH2 BOYS</a>
                                     </div>
                                 </div>
                             </div>

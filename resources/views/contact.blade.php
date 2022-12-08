@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Sports Gallery</title>
+    <title>Contact</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Conference project">
@@ -15,14 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/contact.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/contact_responsive.css')}}">
 </head>
-
-<style>
-    .portfolio-item .item {
-    /* width: 303px; */
-    float: left;
-    margin-bottom: 10px;
-    }
-</style>
 
 <body>
 
@@ -42,21 +34,24 @@
                                 <div><img src="images/muet_logo.png" alt=""></div>
                             </div>
                             <div class="logo_content">
-                                <div class="logo_text logo_text_not_ie">MGM's Sports Club</div>
-                                <div class="logo_sub"> All Tournament , Competition , Events At One Place</div>
+                                <div class="logo_text logo_text_not_ie">Sports Events Management</div>
+                                <div class="logo_sub">University Of Engineering And Technology</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <ul>
                     <li class="menu_item"><a href="index.html">Home</a></li>
-                    <li class="menu_item"><a href="facilites.html">Facilities</a></li>
-                    <li class="menu_item"><a href="contactus.html">Contact Us</a></li>
+                    <li class="menu_item"><a href="facilities.html">Facilities</a></li>
+                    <li class="menu_item"><a href="contactus.html">Contact Us </a></li>
                     <li class="menu_item"><a href="Achievements.php">Achievements</a></li>
+                    
+
+
                 </ul>
             </div>
             <div class="menu_social">
-                <div class="menu_social_title">Follow us on Social Media</div>
+                <div class="menu_social_title">Follow uf on Social Media</div>
                 <ul>
                     <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -68,28 +63,10 @@
             </div>
         </div>
 
-
         <!-- Home -->
 
         <div class="home">
             <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/1-0.jpg" data-speed="0.8"></div>
-            <div class="home_content_container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="home_content d-flex flex-row align-items-end justify-content-start">
-                                <div class="current_page">Gallery</div>
-                                <div class="breadcrumbs ml-auto">
-                                    <ul>
-                                        <li><a href="/">Home</a></li>
-                                        <li>Gallery</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- Header -->
 
@@ -140,9 +117,9 @@
                                                     <ul>
                                                         <li ><a href="/">Home</a></li>
                                                         <li><a href="/facilities">Facilities</a></li>
-                                                        <li><a href="/contact">Contact Us</a></li>
+                                                        <li class="active"><a href="/contact">Contact Us</a></li>
                                                         <li><a href="/achievements">Achievements</a></li>
-                                                        <li class="active"><a href="/gallery">Gallery</a></li>
+                                                        <li><a href="/gallery">Gallery</a></li>
                                                     </ul>
                                                 </nav>
                                                 <div class="header_extra ml-auto">
@@ -174,203 +151,105 @@
             </header>
 
             <div class="home_content_container">
-             
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content d-flex flex-row align-items-end justify-content-start">
+                                <div class="current_page">Contact</div>
+                                <div class="breadcrumbs ml-auto">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li>Contact Us</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-
-    
-<!-- Gallary stat -->
-
-
-    <!-- header starts -->
-    
-
-    
-    <!-- header ends -->
-
-    
-
-
-    
-    <!-- ajax for photo gallery -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-
-
-    <style>
-        .fancylight img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 5px;
-        }
-    </style>
-
-    <!-- photo gallery starts -->
-    <div class="container mt-4 mb-4">
-        <div class="pb-4">
-            <h3 class="fw-regular">Sport's Gallary </h3>
-        </div>
-
-        <!-- <div class="portfolio-menu mt-2 mb-4">
-                                    <ul>
-                                        <li class="btn btn-outline-dark active" data-filter="*">All</li>
-                                        <li class="btn btn-outline-dark" data-filter=".gts">Girls T-shirt</li>
-                                        <li class="btn btn-outline-dark" data-filter=".lap">Laptops</li>
-                                        <li class="btn btn-outline-dark text" data-filter=".selfie">selfie</li>
-                                    </ul>
-                                </div> -->
-
-        <div class="portfolio-item row">
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/EE668XA8sef4CufECLmi3Hx9SLdbQGaUQmkw4hUv.png" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/EE668XA8sef4CufECLmi3Hx9SLdbQGaUQmkw4hUv.png" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/F3MKOcZ3HJEwYd30dHMpcTCQVU2UNNpGf0Y5VQgu.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/F3MKOcZ3HJEwYd30dHMpcTCQVU2UNNpGf0Y5VQgu.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/4EgbjX8YLWDDPsEM7fVk949rcrSnn49T5G6jkdyf.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/4EgbjX8YLWDDPsEM7fVk949rcrSnn49T5G6jkdyf.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/o41eNDkGPnrViYl41gt20cbeE7AnmeMynvJScdtR.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/o41eNDkGPnrViYl41gt20cbeE7AnmeMynvJScdtR.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/1g69jWDLiHNjCLKPRfbsYZL4m6msQFLQk14jeb9g.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/1g69jWDLiHNjCLKPRfbsYZL4m6msQFLQk14jeb9g.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/oo3x9QUufdcYf0zJDA39Ltecn0XCgpN2JGbBrTb7.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/oo3x9QUufdcYf0zJDA39Ltecn0XCgpN2JGbBrTb7.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/lkZdnyU1In4zVHY0KEgHwS4g0TUfCmHWdRC69oEB.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/lkZdnyU1In4zVHY0KEgHwS4g0TUfCmHWdRC69oEB.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/bgWqttZohkUCJfcm01DFd40Oob3qNyDRFO0XJeMx.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/bgWqttZohkUCJfcm01DFd40Oob3qNyDRFO0XJeMx.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/j3EoMTBzHXVhHfPh6w9rsZ0mZ201tVz4B021pvQL.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/j3EoMTBzHXVhHfPh6w9rsZ0mZ201tVz4B021pvQL.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/qRlg83KkssSM836HDdZ5rrtdPOaFb5zxAvdnl4Ze.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/qRlg83KkssSM836HDdZ5rrtdPOaFb5zxAvdnl4Ze.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/N4HTXpGh0CUs46Lxu5Z0Rpi5afsReSWP2xVc9yRd.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/N4HTXpGh0CUs46Lxu5Z0Rpi5afsReSWP2xVc9yRd.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/weHufJNdz2DYGzUrnW4KTzctoSGOpgkIkutzEKDs.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/weHufJNdz2DYGzUrnW4KTzctoSGOpgkIkutzEKDs.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/3VGPCTEg7lHu5FzlUEfAxM1CduncwTTChhmuKJyO.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/3VGPCTEg7lHu5FzlUEfAxM1CduncwTTChhmuKJyO.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/1f9x2RLeIFVnQcQm6n0Ik33DWgTmupqtuAplntMr.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/1f9x2RLeIFVnQcQm6n0Ik33DWgTmupqtuAplntMr.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/Sf6sRzqHa5XSLuIYWam3MY8CGkdVJtM7jqD5Shmg.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/Sf6sRzqHa5XSLuIYWam3MY8CGkdVJtM7jqD5Shmg.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/NWD9Gpjdfh2lJUavFMebmgmXldaflEk9i6oGO765.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/NWD9Gpjdfh2lJUavFMebmgmXldaflEk9i6oGO765.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/4E884fdkM42IwxfIgzTc5YPQire3YMOfgoRZDR2l.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/4E884fdkM42IwxfIgzTc5YPQire3YMOfgoRZDR2l.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/QE1pLTeesLdye2dAnRzYyclUovBsvJfeGEf3COJ2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/QE1pLTeesLdye2dAnRzYyclUovBsvJfeGEf3COJ2.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/3IOf11sHggWl5NQvcjsiSGxrFPNUHWCMY20NosVP.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/3IOf11sHggWl5NQvcjsiSGxrFPNUHWCMY20NosVP.jpg" alt="">
-                    </a>
-                </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/rcdWNSPShYnhnmug2QPydTHC31iw1GSWrxsXhBdl.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/rcdWNSPShYnhnmug2QPydTHC31iw1GSWrxsXhBdl.jpg" alt="">
-                    </a>
-                </div>
-                    </div>
-
-
-
-    </div>
-    <!-- photo gallery ends -->
-
-    <script>
-        $(document).ready(function() {
-            var popup_btn = $('.popup-btn');
-            popup_btn.magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-    </script>
-
-
-
-
-
-  
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-
-
-    <script src="https://alumni.jnec.org//assets/js/main.js"></script>
-
-
-
-
-
-
-    
-<!-- Gallery End Start -->
-    
-
         <!-- Contact -->
 
-    
+        <div class="contact">
+            <div class="contact_map_background">
+
+                <!-- Contact Map -->
+                <div class="contact_map">
+
+                    <!-- Google Map -->
+                    <div class="map">
+                        <div id="google_map" class="google_map">
+                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.8928863352553!2d68.25835531448868!3d25.408395829335806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c795e86cdf11b%3A0xef1bd0f6ec31ced3!2sMehran%20University%20of%20Engineering%20and%20Technology%20MUET!5e0!3m2!1sen!2s!4v1580200414538!5m2!1sen!2s" width="1920" height="1080" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15008.227098071633!2d75.34782226756916!3d19.879824415193134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba296c53600ab%3A0xf93e15739fc74b8a!2sM%20G%20M%2C%20Aurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1670357754218!5m2!1sen!2sin" width="1920" height="1080" frameborder="0" style="border:0;" allowfullscreen="" ></iframe>
+                            <div class="map_container">
+
+                                <!--							<div id="map"> </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact_form_container">
+                            <div class="contact_form_title">Book An Appointment</div>
+                            <form action="#" class="contact_form" id="contact_form">
+                                <input type="text" class="contact_input" placeholder="Name" required="required">
+                                <input type="email" class="contact_input" placeholder="E-mail" required="required">
+                                <input type="text" class="contact_input" placeholder="Subject" required="required">
+                                <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Message" required="required"></textarea>
+                                <button class="button contact_button"><span>Submit</span></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <div class="contact_info_container">
+                            <div>
+                                <a href="#">
+                                    <div class="logo_container d-flex flex-row align-items-start justify-content-start">
+                                        <div class="logo_image">
+                                            <div><img src="images/muet_logo.png" alt=""></div>
+                                        </div>
+                                        <div class="logo_content">
+                                            <div id="logo_text" class="logo_text logo_text_not_ie">Sports Events Management</div>
+                                            <div class="logo_sub">University Of Engineering And Technology</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contact_info_list_container">
+                                <ul class="contact_info_list">
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div>
+                                            <div class="contact_info_icon text-center"><img src="images/contact_1.png" alt=""></div>
+                                        </div>
+                                        <div class="contact_info_text">N-6, CIDCO, Aurangabad, Maharashtra </div>
+                                    </li>
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div>
+                                            <div class="contact_info_icon text-center"><img src="images/contact_2.png" alt=""></div>
+                                        </div>
+                                        <div class="contact_info_text">+91 9876543210</div>
+                                    </li>
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div>
+                                            <div class="contact_info_icon text-center"><img src="images/contact_3.png" alt=""></div>
+                                        </div>
+                                        <div class="contact_info_text">www.jnec.org</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="contact_info_pin">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
 

@@ -24,4 +24,20 @@ Route::get('/gallery', function () {
 
 Route::get('/facilities', function(){
     return view('facilities');
-})
+});
+
+Route::get('/contact', function(){
+    return view('contact');
+});
+
+Route::get('/achievements', function(){
+    return view('achievements');
+});
+
+Route::get('/login', function(){
+    return view('login');
+});
+
+Route::get('/register', function(){
+    return view('register');
+});

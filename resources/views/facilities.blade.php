@@ -117,11 +117,11 @@
                                             <div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
                                                 <nav class="main_nav">
                                                     <ul>
-                                                        <li><a href="index.html">Home</a></li>
-                                                        <li class="active"><a href="facilities.html">Facilities</a></li>
-                                                        <li><a href="contactus.html">Contact Us </a></li>
-                                                        <li><a href="Achievements.php">Achievements</a></li>
-
+                                                        <li ><a href="/">Home</a></li>
+                                                        <li class="active"><a href="/facilities">Facilities</a></li>
+                                                        <li><a href="/contact">Contact Us</a></li>
+                                                        <li><a href="/achievements">Achievements</a></li>
+                                                        <li><a href="/gallery">Gallery</a></li>
 
                                                     </ul>
                                                 </nav>
@@ -260,68 +260,51 @@
                     <div class="row">
 
                         <!-- Footer Column -->
-                        <div class="col-lg-4 footer_col">
+                        <div class="col-lg-8 footer_col">
                             <div class="footer_about">
                                 <div>
                                     <a href="#">
-                                        <div class="logo_container d-flex flex-row align-items-start justify-content-start">
+                                        <div
+                                            class="logo_container d-flex flex-row align-items-start justify-content-start">
                                             <div class="logo_image">
                                                 <div><img src="images/muet_logo.png" alt=""></div>
                                             </div>
                                             <div class="logo_content">
-                                                <div class="logo_text logo_text_not_ie">Sports Events Management</div>
-                                                <div class="logo_sub">University Of Engineering And Technology</div>
+                                                <div id="logo_text" class="logo_text logo_text_not_ie">Sports Events
+                                                    Management</div>
+                                                <div class="logo_sub"> All Tournament , Competition , Events At One
+                                                    Place</div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="footer_about_text">
-                                    <p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    <p>The Sport Platform, puts Great Olympic athletes at the heart of its proposition,
+                                        with a greater depth of content, info and data, and a rich new platform...</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Footer Column -->
-                        <div class="col-lg-3 footer_col">
+                        <div class="col-lg-4 footer_col">
                             <div class="footer_links">
                                 <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Speakers</a></li>
-                                    <li><a href="#">Event Dates</a></li>
-                                    <li><a href="#">Information</a></li>
-                                    <li><a href="#">Calendar</a></li>
+
+
+
+
+
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="contact.html">About Us</a></li>
+                                    <li><a href="facilities.html">Facitlities </a></li>
+                                    <li><a href="Achievements.php">Speakers</a></li>
+
+
                                 </ul>
                             </div>
                         </div>
 
-                        <!-- Footer Column -->
-                        <div class="col-lg-3 footer_col">
-                            <div class="footer_links">
-                                <ul>
-                                    <li><a href="#">Logistics</a></li>
-                                    <li><a href="#">Our Partners</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <!-- Footer Column -->
-                        <div class="col-lg-2 footer_col">
-                            <div class="footer_links">
-                                <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Speakers</a></li>
-                                    <li><a href="#">Event Dates</a></li>
-                                    <li><a href="#">Information</a></li>
-                                    <li><a href="#">Calendar</a></li>
-                                </ul>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -330,16 +313,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <div class="footer_extra_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
+                            <div
+                                class="footer_extra_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
                                 <div class="footer_social">
                                     <div class="footer_social_title">Follow us on Social Media</div>
                                     <ul class="footer_social_list">
-                                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="footer_extra_right ml-lg-auto text-lg-right">
@@ -352,11 +342,12 @@
                                     </div>
                                     <div class="copyright">
                                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                        Copyright &copy;<script>
+                                        Copyright &copy;
+                                        <script>
                                             document.write(new Date().getFullYear());
-
-                                        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        </script> All rights reserved | This is made with <i
+                                            class="fa fa-heart-o" aria-hidden="true"></i> <a href=""
+                                            target="_blank">BTECH2 BOYS</a>
                                     </div>
                                 </div>
                             </div>
@@ -365,7 +356,6 @@
                 </div>
             </div>
         </footer>
-
     </div>
 
     <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
