@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Spatie\FlareClient\View;
-
+use app\Http\Controllers\HomeController;
+use App\Http\Controllers\routeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,30 +15,14 @@ use Spatie\FlareClient\View;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [routeController::class, 'loadHome'])->name('home');
+Route::get('/facilities', [routeController::class, 'loadFacilities'])->name('facilities');
+Route::get('/contact', [routeController::class, 'loadContact'])->name('contact');
+Route::get('/achievements', [routeController::class, 'loadAchievements'])->name('achievements');
+Route::get('/gallery', [routeController::class, 'loadGallery'])->name('gallery');
+Route::get('/login', [routeController::class, 'login'])->name('login');
+Route::get('/registration', [routeController::class, 'registration'])->name('registration');
+Route::get('/register',[routeController::class, 'register'])->name('register');
 
-Route::get('/gallery', function () {
-    return View('gallery');
-});
 
-Route::get('/facilities', function(){
-    return view('facilities');
-});
 
-Route::get('/contact', function(){
-    return view('contact');
-});
-
-Route::get('/achievements', function(){
-    return view('achievements');
-});
-
-Route::get('/login', function(){
-    return view('login');
-});
-
-Route::get('/register', function(){
-    return view('register');
-});

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Login</title>
+  <title>Register</title>
 
   <!-- Favicons -->
   <link href="assets/images/favicon.png" rel="icon">
@@ -55,16 +55,23 @@
 
         <div class="registeruserform mt-4 mb-4">
           <h4 class="mb-4 text-center">
-            Admin Login
+            Admin Registration
           </h4>
 
           <form action="">
 
             <div class="mb-3">
-              <label for="exampleFormControlInput2" class="form-label">Username
+              <label for="exampleFormControlInput2" class="form-label">Full Name
               </label>
               <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="">
             </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Email ID
+                </label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="">
+            </div>
+            
 
             <div class="mb-3">
               <label for="exampleFormControlInput4" class="form-label">Password
@@ -72,16 +79,14 @@
               <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="">
             </div>
 
-            <div class="registerloginbtn mb-2">
-              <button class="btn btn-primary w-100 ">Login</button>
-            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label">Confirm Password
+                </label>
+                <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="">
+              </div>
 
             <div class="registerloginbtn mb-2">
-              <a href="{{route('registration')}}">
-                Click here to register
-              </a>
-
-              </a>
+              <button class="btn btn-primary w-100 ">Register</button>
             </div>
 
           </form>

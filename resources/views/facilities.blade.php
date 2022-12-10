@@ -1,176 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Facilities</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Conference project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.MainLayout',['parallax'=>true])
+@section('current','Facilities')
+@push('css')
     <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/bootstrap4/bootstrap.min.css')}}">
     <link href="{{asset('assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/elements.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/elements_responsive.css')}}">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!--    <script src="https://kit.fontawesome.com/d3eca41609.js')}}" crossorigin="anonymous"></script>-->
+    <script src="https://kit.fontawesome.com/d3eca41609.js')}}" crossorigin="anonymous"></script>
     <script src="{{asset('assets/js/fa-hack.js')}}"> </script>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/facilities.css')}}"> </head> <body>
 
-    <div class="super_container">
+@endpush
+    
 
-        <!-- Menu -->
-
-        <div class="menu trans_500">
-            <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="menu_close_container">
-                    <div class="menu_close"></div>
-                </div>
-                <div class="logo menu_logo">
-                    <a href="#">
-                        <div class="logo_container d-flex flex-row align-items-start justify-content-start">
-                            <div class="logo_image">
-                                <div><img src="images/muet_logo.png" alt=""></div>
-                            </div>
-                            <div class="logo_content">
-                                <div id="logo_text" class="logo_text logo_text_not_ie">Sports Events Management</div>
-                                <div class="logo_sub">University Of Engineering And Technology</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <ul>
-                    <li class="menu_item"><a href="index.html">Home</a></li>
-                    <li class="menu_item"><a href="facilities.html">Facilities</a></li>
-                    <li class="menu_item"><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="Achievements.php">Achievements</a></li>
-
-                    <!--
-                    <li class="menu_item"><a href="#">Speakers</a></li>
-                    <li class="menu_item"><a href="#">Tickets</a></li>
-                    <li class="menu_item"><a href="news.html">News</a></li>
-                    <li class="menu_item"><a href="contact.html">Contact</a></li>
--->
-                </ul>
-            </div>
-            <div class="menu_social">
-                <div class="menu_social_title">Follow uf on Social Media</div>
-                <ul>
-                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Home -->
-
-        <div class="home">
-            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/1-0.jpg" data-speed="0.8"></div>
-
-            <!-- Header -->
-
-            <header class="header" id="header">
-                <div>
-                    <div class="header_top">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="header_top_content d-flex flex-row align-items-center justify-content-start">
-                                        <div>
-                                            <a href="#">
-                                                <div class="logo_container d-flex flex-row align-items-start justify-content-start">
-                                                    <div class="logo_image">
-                                                        <div><img src="images/muet_logo.png" alt=""></div>
-                                                    </div>
-                                                    <div class="logo_content">
-                                                        <div id="logo_text" class="logo_text logo_text_not_ie">Sports Events Management</div>
-                                                        <div class="logo_sub">University Of Engineering And Technology</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="header_social ml-auto">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header_nav" id="header_nav_pin">
-                        <div class="header_nav_inner">
-                            <div class="header_nav_container">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
-                                                <nav class="main_nav">
-                                                    <ul>
-                                                        <li ><a href="/">Home</a></li>
-                                                        <li class="active"><a href="/facilities">Facilities</a></li>
-                                                        <li><a href="/contact">Contact Us</a></li>
-                                                        <li><a href="/achievements">Achievements</a></li>
-                                                        <li><a href="/gallery">Gallery</a></li>
-
-                                                    </ul>
-                                                </nav>
-                                                <div class="header_extra ml-auto">
-                                                    <div class="header_search"><i class="fa fa-search" aria-hidden="true"></i></div>
-                                                    <!--                                                    <div class="button header_button"><a href="#">Buy Tickets Now!</a></div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="search_container">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="search_content d-flex flex-row align-items-center justify-content-end">
-                                                <form action="#" id="search_container_form" class="search_container_form">
-                                                    <input type="text" class="search_container_input" placeholder="Search" required="required">
-                                                    <button class="search_container_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <div class="home_content_container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="home_content d-flex flex-row align-items-end justify-content-start">
-                                <div class="current_page">Facilities</div>
-                                <div class="breadcrumbs ml-auto">
-                                    <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li>Facilities</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+@section('content')  
+        
 
         <!-- Elements -->
 
@@ -252,111 +96,12 @@
             </div>
         </div>
 
-        <!-- Footer -->
-
-        <footer class="footer">
-            <div class="footer_content">
-                <div class="container">
-                    <div class="row">
-
-                        <!-- Footer Column -->
-                        <div class="col-lg-8 footer_col">
-                            <div class="footer_about">
-                                <div>
-                                    <a href="#">
-                                        <div
-                                            class="logo_container d-flex flex-row align-items-start justify-content-start">
-                                            <div class="logo_image">
-                                                <div><img src="images/muet_logo.png" alt=""></div>
-                                            </div>
-                                            <div class="logo_content">
-                                                <div id="logo_text" class="logo_text logo_text_not_ie">Sports Events
-                                                    Management</div>
-                                                <div class="logo_sub"> All Tournament , Competition , Events At One
-                                                    Place</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="footer_about_text">
-                                    <p>The Sport Platform, puts Great Olympic athletes at the heart of its proposition,
-                                        with a greater depth of content, info and data, and a rich new platform...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Footer Column -->
-                        <div class="col-lg-4 footer_col">
-                            <div class="footer_links">
-                                <ul>
 
 
+@endsection
 
-
-
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="contact.html">About Us</a></li>
-                                    <li><a href="facilities.html">Facitlities </a></li>
-                                    <li><a href="Achievements.php">Speakers</a></li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="footer_extra">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div
-                                class="footer_extra_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
-                                <div class="footer_social">
-                                    <div class="footer_social_title">Follow us on Social Media</div>
-                                    <ul class="footer_social_list">
-                                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer_extra_right ml-lg-auto text-lg-right">
-                                    <div class="footer_extra_links">
-                                        <ul>
-                                            <li><a href="contact.html">Contact us</a></li>
-                                            <li><a href="#">Sitemap</a></li>
-                                            <li><a href="#">Privacy</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="copyright">
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                        Copyright &copy;
-                                        <script>
-                                            document.write(new Date().getFullYear());
-                                        </script> All rights reserved | This is made with <i
-                                            class="fa fa-heart-o" aria-hidden="true"></i> <a href=""
-                                            target="_blank">BTECH2 BOYS</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+@push('script')
+    
 
     <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('assets/styles/bootstrap4/popper.js')}}"></script>
@@ -371,6 +116,5 @@
     <script src="{{asset('assets/plugins/jquery-circle-progress-1.2.2/circle-progress.js')}}"></script>
     <script src="{{asset('assets/plugins/parallax-js-master/parallax.min.js')}}"></script>
     <script src="{{asset('assets/js/elements.js')}}"></script>
-    </body>
 
-</html>
+    @endpush
