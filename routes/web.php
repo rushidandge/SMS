@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Spatie\FlareClient\View;
-use app\Http\Controllers\HomeController;
 use App\Http\Controllers\routeController;
 /*
 |--------------------------------------------------------------------------
