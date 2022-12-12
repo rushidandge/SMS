@@ -60,7 +60,7 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/cricket.jpg" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department Cricket
+            <div class="intro_title"><a href="{{route('registration')}}">All Department Cricket
                 </a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
             <style>
@@ -68,7 +68,7 @@
                     color: blue;
                 }
             </style>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
 
 
@@ -80,10 +80,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/football.jpg" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department FootBall
+            <div class="intro_title"><a href="{{route('registration')}}">All Department FootBall
                 </a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
@@ -92,10 +92,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/basketball.webp" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department BasketBall
+            <div class="intro_title"><a href="{{route('registration')}}">All Department BasketBall
                 </a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
@@ -104,10 +104,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/tableteenis.webp" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department
+            <div class="intro_title"><a href="{{route('registration')}}">All Department
                     TableTennis </a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
@@ -116,10 +116,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/batbitan.webp" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department Badminton
+            <div class="intro_title"><a href="{{route('registration')}}">All Department Badminton
                 </a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
@@ -128,10 +128,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/thugofwar.webp" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department Tug Of
+            <div class="intro_title"><a href="{{route('registration')}}">All Department Tug Of
                     WAR</a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
@@ -140,10 +140,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/marathon.jpg" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department
+            <div class="intro_title"><a href="{{route('registration')}}">All Department
                     Marathon</a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
@@ -152,10 +152,10 @@
     <div class="intro_item">
         <div class="intro_image"><img src="images/Main-Sports/vollball.jpg" alt=""></div>
         <div class="intro_body">
-            <div class="intro_title"><a href="{{route('register')}}">All Department
+            <div class="intro_title"><a href="{{route('registration')}}">All Department
                     Volleyball</a></div>
             <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
-            <div class="intro_title"><a href="{{route('register')}}"> <b>Register Now</b></a>
+            <div class="intro_title"><a href="{{route('registration')}}"> <b>Register Now</b></a>
             </div>
         </div>
     </div>
