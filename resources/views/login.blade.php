@@ -58,18 +58,18 @@
             Admin Login
           </h4>
 
-          <form action="/login" method="POST">
-            @csrf
+          <form action="">
+
             <div class="mb-3">
               <label for="exampleFormControlInput2" class="form-label">Username
               </label>
-              <input type="text" name="email" class="form-control" id="exampleFormControlInput2" placeholder="">
+              <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="">
             </div>
 
             <div class="mb-3">
               <label for="exampleFormControlInput4" class="form-label">Password
               </label>
-              <input type="password" name="password" class="form-control" id="exampleFormControlInput4" placeholder="">
+              <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="">
             </div>
 
             <div class="registerloginbtn mb-2">
