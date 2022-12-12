@@ -35,7 +35,7 @@ class routeController extends Controller
 
     public function login()
     {
-        return view('login');
+        return view('auth/login');
     }
 
     public function registration()
@@ -45,7 +45,7 @@ class routeController extends Controller
 
     public function register()
     {
-        return view('register');
+        return view('auth/register');
     }
 
 }

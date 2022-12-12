@@ -1,119 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Register</title>
-
-  <!-- Favicons -->
-  <link href="assets/images/favicon.png" rel="icon">
-  <link href="assets/images/favicon.png" rel="apple-touch-icon">
-  <!-- material icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="assets/css/styles.css" rel="stylesheet" />
-
-  <meta name="author" content="BTech-2 Boys">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-  <!-- texteditor js cdn -->
-  <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
-  <!-- image uploader css -->
-  <link rel="stylesheet" href="assets/css/image-uploader.min.css">
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Sports Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{{asset('assets/images/icons/favicon-32x32.png')}}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/animate/animate.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/css-hamburgers/hamburgers.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/animsition/css/animsition.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/select2/select2.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/daterangepicker/daterangepicker.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <!--===============================================================================================-->
 </head>
 
 <body>
 
 
-  <div class="d-flex" id="wrapper">
+    <div class="container-contact100">
+        <div class="contact100-map" id="google_map" data-map-x="25.407384" data-map-y="68.261887" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 
+        <div class="wrap-contact100">
+            <div class="contact100-form-title" style="background-image: url(images/sr-1.jpg);">
+                <span class="contact100-form-title-1">
+                    Register Now
+                </span>
 
-    <!-- Page content wrapper-->
-    <div id="page-content-wrapper">
-      <!-- Top navigation-->
-      <nav class="navbar navbar-expand-lg bluebg">
-        <div class="container-fluid d-flex p-1 px-4">
-          <div id="companylogo">
-            <img src="assets/images/mainlogo1.png" alt="">
-          </div>
+                <span class="contact100-form-title-2">
+                    Sports Week 2020
+                </span>
+            </div>
 
+            <form class="contact100-form validate-form" action="insert.php" method="post">
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <span class="label-input100">Full Name:</span>
+                    <input class="input100" type="text" name="name" placeholder="Enter full name" id="lastName">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <span class="label-input100">Roll No: </span>
+                    <input class="input100" type="text" name="regno" id="rollno" placeholder="EXAMPLE :: 16SW189">
+
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="email is required">
+                    <span class="label-input100">Email</span>
+                    <input class="input100" type="email" name="email" id="email" placeholder="Example@gmail.com">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                    <label for="cars">Choose a sport</label>
+                    <select class="select-css" id="Sport" name="course" class="sports" style="float: right">
+                        <option value="6">Cricket</option>
+                        <option value="7">Fooball</option>
+                        <option value="8">Table Tennis</option>
+                    </select> </div>
+                
+                <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                    <label for="Depart">Choose Your Department</label>
+
+                    <select class="select-css"id="depart" name="depart" style="float: right">
+                        <option value="bilal">software</option>
+                        <option value="sahil">Bio</option>
+                        <option value="alisiyal">IT</option>
+                    </select>
+                </div>
+                
+                <br><br>
+                <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                    <label for="year">Year  </label>
+                    <select class="select-css" id="year" name="year" style="float: right">
+                        <option value="1st">1st</option>
+                        <option value="2nd">2nd</option>
+                        <option value="3rd">3rd</option>
+                        <option value="4th">4th</option>
+                    </select>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn" type="submit" value="Submit">
+                        <span style="color: white">
+                            Submit
+                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true" style="color: white"></i>
+                        </span>
+                    </button>
+                </div>
+            </form>
         </div>
-      </nav>
-
-
-      <!-- Page content-->
-      <div class="container-fluid" style="margin-top: 150px;">
-
-        <div class="registeruserform mt-4 mb-4">
-          <h4 class="mb-4 text-center">
-            Admin Registration
-          </h4>
-
-          <form action="">
-
-            <div class="mb-3">
-              <label for="exampleFormControlInput2" class="form-label">Full Name
-              </label>
-              <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="">
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleFormControlInput2" class="form-label">Email ID
-                </label>
-                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="">
-            </div>
-            
-
-            <div class="mb-3">
-              <label for="exampleFormControlInput4" class="form-label">Password
-              </label>
-              <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="">
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleFormControlInput4" class="form-label">Confirm Password
-                </label>
-                <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="">
-              </div>
-
-            <div class="registerloginbtn mb-2">
-              <button class="btn btn-primary w-100 ">Register</button>
-            </div>
-
-          </form>
-        </div>
-
-      </div>
-      <!-- Page content ends-->
-
     </div>
-  </div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/js/image-uploader.min.js"></script>
 
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Core theme JS-->
-  <script src="assets/js/scripts.js"></script>
-  <script src="assets/js/calendar.js"></script>
-  <script type="text/javascript" src="http://example.com/jquery.min.js"></script>
-  <script type="text/javascript" src="http://example.com/image-uploader.min.js"></script>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
 
-</body>
+    <div id="dropDownSelect1"></div>
 
-</html>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/vendor/animsition/js/animsition.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/vendor/select2/select2.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/vendor/daterangepicker/moment.min.js')}}"></script>
+    <script src="{{asset('assets/vendor/daterangepicker/daterangepicker.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/vendor/countdowntime/countdowntime.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrY4cWbMf23GoTKz7DkrZ960bsKRFMne4"></script>
+    <script src="{{asset('assets/js/map-custom.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('assets/js/main.js')}}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+</body></html>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Spatie\FlareClient\View;
+use app\Http\Controllers\HomeController;
 use App\Http\Controllers\routeController;
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,13 @@ Route::get('/register',[routeController::class, 'register'])->name('register');
 
 
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
