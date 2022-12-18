@@ -1,20 +1,4 @@
-<x-app-layout>
-    <!-- <x-slot name="header">
-
-    </x-slot> -->
-    <style>
-        .min-h-screen {
-    min-height: 0vh;
-              }
-              .max-w-7xl.mx-auto.py-6.px-4.sm\:px-6.lg\:px-8 {
-    padding: 0px;
-}
-    </style>
-
-    <!-- <div class="py-12">
-      <h1>hafjk</h1>
-    </div> -->
-    @extends('admin.mainLayout')
+@extends('admin.mainLayout')
 
 @push('css')
  <link href="{{asset('assets/images/favicon.png')}}" rel="icon">
@@ -309,6 +293,3 @@
 </div>
 <!-- Page content ends-->
 @endsection
-
-
-</x-app-layout>

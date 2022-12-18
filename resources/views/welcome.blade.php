@@ -161,7 +161,86 @@
     </div>
 
 </div>
+
+            <!-- solo section -->
+            <div class="text-center">
+                <h3><b>Solo Sports</b></h3> <br>
+            </div>
+            
+
+            <div class="intro_content d-flex flex-row flex-wrap align-items-start justify-content-between">
+
+                <!-- Intro Item -->
+                <div class="intro_item">
+                    <div class="intro_image"><img src="images/Main-Sports/boxing.jpg" alt=""></div>
+                    <div class="intro_body">
+                        <div class="intro_title"><a href="student%20registration/solo_register.html">Boxing </a></div>
+                        <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+                        <style>
+                            element.style{
+                                color: blue;
+                            }
+                        </style>
+                        <div class="intro_title"><a href="student%20registration/solo_register.html"> <b>Register Now</b></a></div>
+                    
+
+
+                    </div>
+                </div>
+
+                <!-- Intro Item -->
+                <div class="intro_item">
+                    <div class="intro_image"><img src="images/Main-Sports/Cycling.jpg" alt=""></div>
+                    <div class="intro_body">
+                        <div class="intro_title"><a href="student%20registration/solo_register.html">Cycling </a></div>
+                        <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+                        <div class="intro_title"><a href="student%20registration/solo_register.html"> <b>Register Now</b></a></div>
+                    </div>
+                </div>
+                
+               
+
+                <!-- Intro Item -->
+                <div class="intro_item">
+                    <div class="intro_image"><img src="images/Main-Sports/tableteenis.webp" alt=""></div>
+                    <div class="intro_body">
+                        <div class="intro_title"><a href="student%20registration/solo_register.html">Solo TableTennis </a></div>
+                         <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+                        <div class="intro_title"><a href="student%20registration/solo_register.html"> <b>Register Now</b></a></div>   </div>
+                </div>
+
+                <!-- Intro Item -->
+                <div class="intro_item">
+                    <div class="intro_image"><img src="images/Main-Sports/batbitan.webp" alt=""></div>
+                    <div class="intro_body">
+                        <div class="intro_title"><a href="student%20registration/solo_register.html">Solo Badminton </a></div>
+                        <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+                        <div class="intro_title"><a href="/soloreg"> <b>Register Now</b></a></div>
+                    </div>
+                </div>
+
+
+
+                <!-- Intro Item -->
+                <!-- <div class="intro_item">
+                    <div class="intro_image"><img src="images/Main-Sports/marathon.jpg" alt=""></div>
+                    <div class="intro_body">
+                        <div class="intro_title"><a href="student%20registration/index.html">Marathon</a></div>
+                        <div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+                        <div class="intro_title"><a href="student%20registration/index.html"> <b>Register Now</b></a></div>
+                    </div>
+                </div> -->
+
+               
+
+            </div>
+
+
+
+            <!-- end solo section -->
 </div>
+
+
 
 
 

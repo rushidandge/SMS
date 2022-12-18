@@ -24,6 +24,16 @@ Route::get('/login', [routeController::class, 'login'])->name('login');
 Route::get('/registration', [routeController::class, 'registration'])->name('registration');
 Route::get('/register',[routeController::class, 'register'])->name('register');
 
+Route::get('/admin',function(){ return view('admin/dashbord');});
+Route::get('/tournament',function(){ return view('admin/tournament');});
+
+Route::get('/faq',function(){ return view('admin/faq');});
+
+Route::get('/seeparticipate',function(){ return view('admin/seeparticipate');});
+
+Route::get('/achivements',function(){ return view('admin/achivements');});
+
+Route::get('/gallary',function(){ return view('admin/gallary');});
 
 
 

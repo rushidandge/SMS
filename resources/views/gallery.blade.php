@@ -38,10 +38,10 @@
     </style>
 
     <!-- photo gallery starts -->
-    <div class="container mt-4 mb-4">
-        <div class="pb-4">
-            <h3 class="fw-regular">Sport's Gallary </h3>
-        </div>
+        <div class="container mt-4 mb-4">
+        <div class="text-center">
+                <h3><b>Sports Gallery</b></h3> <br>
+            </div>
 
         <!-- <div class="portfolio-menu mt-2 mb-4">
                                     <ul>

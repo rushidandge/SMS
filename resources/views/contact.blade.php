@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contact_form_container">
-                            <div class="contact_form_title">Book An Appointment</div>
+                            <div class="contact_form_title">Ask Any Question</div>
                             <form action="#" class="contact_form" id="contact_form">
                                 <input type="text" class="contact_input" placeholder="Name" required="required">
                                 <input type="email" class="contact_input" placeholder="E-mail" required="required">

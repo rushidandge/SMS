@@ -26,8 +26,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <!--===============================================================================================-->
-
-    
 </head>
 
 <body>
@@ -40,7 +38,7 @@
         <div class="wrap-contact100">
             <div class="contact100-form-title" style="background-image: url(images/reg\ bg.jpg);">
                 <span class="contact100-form-title-1">
-                    Register Your Team Now
+                    Register Now
                 </span>
 
                 <span class="contact100-form-title-2">
@@ -50,44 +48,41 @@
 
             <form class="contact100-form validate-form" action="insert.php" method="post">
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <span class="label-input100">Captain Full Name:</span>
+                    <span class="label-input100">Full Name:</span>
                     <input class="input100" type="text" name="name" placeholder="Enter full name" id="lastName">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="PRN is required">
-                    <span class="label-input100">Captain PRN No: </span>
+                <div class="wrap-input100 validate-input" data-validate="Prn is required">
+                    <span class="label-input100">PRN No: </span>
                     <input class="input100" type="number" name="regno" id="rollno" placeholder="EXAMPLE :: 1921321242087">
 
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="email is required">
-                    <span class="label-input100">Captain Email</span>
-                    <input class="input100" type="email" name="email" id="email" placeholder="Example@gmail.com">
-                    <span class="focus-input100"></span>
-                </div>
-
                 <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                    <span class="label-input100">Captain Mobile No</span>
+                    <span class="label-input100">Mobile No</span>
                     <input class="input100" type="number" name="mobno" id="mobno" placeholder="EXAMPLE ::+91 1234567890">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Phone is required" >
+                <div class="wrap-input100 validate-input" data-validate="email is required">
+                    <span class="label-input100">Email</span>
+                    <input class="input100" type="email" name="email" id="email" placeholder="Example@gmail.com">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Sport is required" >
                     <!-- <label for="cars">Choose a sport</label> -->
                     <br>
                     <span class="label-input100" >Choose Sport</span>
                     <select class="select-css" id="Sport" name="course" class="sports" >
                         <option value="" disabled selected>Select Sport</option>
-                        <option value="6">Cricket</option>
-                        <option value="7">Fooball</option>
-                        <option value="8">BasketBall</option>
-                        <option value="9">Table Tennis</option>
-                        <option value="10">Badminton</option>
-                        <option value="11">Tug Of War</option>
-                        <option value="12">Marathon</option>
-                        <option value="13">Volleyball</option>
+                        <option value="1">Badminton Solo</option>
+                        <option value="2">Marathon Solo</option>
+                        <option value="3">Cycling</option>
+                        <option value="4">Table Tennis Solo</option>
+                        <option value="5">Boxing</option>
 
                     </select>
                 </div>
@@ -124,47 +119,14 @@
                     </select>
                 </div>
 
-                
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <span class="label-input100">Team Name:</span>
-                    <input class="input100" type="text" name="name" placeholder="Name Of Team" id="lastName">
-                   
-                
-                    
-                </div>
-
-                
-                
-                
-                
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <span class="label-input100">Information About Member:</span>
-                    
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-               
-                    <div class="container1" data-validate="Name is required">
-                        <button class="add_form_field">Add Member &nbsp;
-                            <span style="font-size:16px; font-weight:bold;">+ </span>
-                        </button>
-                        <div style="color: #000000;">
-                            <!-- <input type="text" name="mytext[]"> -->
-                            <span class="label-input100" ></span>
-                            <input class="input100" type="text" name="mytext[]" placeholder="Name Of Member" id="lastName" >
-                            <span class="focus-input100"></span>
-                        
-                        </div>
-                    </div>
-                </div>
-
-              
-
+  
 
 
                 <!-- <div class="wrap-input100 validate-input" data-validate="Name is required">
                     <span class="label-input100">Full Name:</span>
                     <input class="input100" type="text" name="name" placeholder="Enter full name" id="lastName">
                     <span class="focus-input100"></span>
-                </div> -->
+                </div>  -->
 
                 <!-- <div class="form-group">
                     <span class="label-input100">Information Of Team:</span>
@@ -189,6 +151,7 @@
             </form>
         </div>
     </div>
+
 
 
 
