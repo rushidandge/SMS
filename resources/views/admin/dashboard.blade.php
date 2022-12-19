@@ -1,4 +1,4 @@
-@extends('admin.mainLayout')
+@extends('dashboard')
 
 @push('css')
  <link href="{{asset('assets/images/favicon.png')}}" rel="icon">

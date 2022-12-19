@@ -24,16 +24,14 @@ Route::get('/login', [routeController::class, 'login'])->name('login');
 Route::get('/registration', [routeController::class, 'registration'])->name('registration');
 Route::get('/register',[routeController::class, 'register'])->name('register');
 
-Route::get('/admin',function(){ return view('admin/dashbord');});
-Route::get('/tournament',function(){ return view('admin/tournament');});
+Route::get('/admin',[routeController::class, 'admin'])->name('admin');
+Route::get('/adtournament',[routeController::class, 'adtournament'])->name('adtournament');
+Route::get('/adgallery',[routeController::class, 'adgallery'])->name('adgallery');
+Route::get('/adfaq',[routeController::class, 'adfaq'])->name('adfaq');
+Route::get('/adpart',[routeController::class, 'adpart'])->name('adpart');
+Route::get('/adachivement',[routeController::class, 'adachivement'])->name('adachivement');
 
-Route::get('/faq',function(){ return view('admin/faq');});
 
-Route::get('/seeparticipate',function(){ return view('admin/seeparticipate');});
-
-Route::get('/achivements',function(){ return view('admin/achivements');});
-
-Route::get('/gallary',function(){ return view('admin/gallary');});
 
 
 
