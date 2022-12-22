@@ -187,28 +187,53 @@
                     <h5 class="modal-title" id="exampleModalLabel">Add Achievement</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <form action="{{route('achievement.store')}}" method="post" enctype="multipart/form-data">
+                @csrf
+                
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Achievement
+                        <label for="exampleFormControlInput1" class="form-label" >Achievement
                             Name</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
+                        <input type="text" required name="event_name" class="form-control form-control-sm" id="exampleFormControlInput1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Sub-title
+                            </label>
+                        <input type="text" required name="subtitle" class="form-control form-control-sm" id="exampleFormControlInput1">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Achievement
-                            Details</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
+                            Description</label>
+                        <input type="text" required name="description" class="form-control form-control-sm" id="exampleFormControlInput1">
                     </div>
 
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Author </label>
+                        <input type="text" required name="author" class="form-control form-control-sm" id="exampleFormControlInput1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Date</label>
+                        <input type="date" required name="date" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="DD/MM/YY">
+                    </div>
+
+                    
                     <div class="mb-3">
                         <label for="formFileSm" class="form-label">Upload Achievement
                             Image</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        <input name="image" required class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
+
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn bluebg btn-sm">Add/Save Achievement</button>
+                    <button type="submit" class="btn bluebg btn-sm">Add/Save Achievement</button>
                 </div>
+            </form>
+
+
             </div>
         </div>
     </div>

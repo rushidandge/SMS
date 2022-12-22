@@ -88,7 +88,7 @@
 
 
           <li>
-            <a href="{{route('adachivement')}}" class="nav-link">
+            <a href="{{route('adachievement')}}" class="nav-link">
               Achievements
             </a>
           </li>

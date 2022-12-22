@@ -68,16 +68,18 @@
                     <!-- table -->
                     <div id="alldatatable" class="bg-white mt-2 pt-3">
                         <div id="allcategories">
-
+                            @forelse ($tournament as $data )
+                                
+                            
                             <div class="categoryitemcont">
                                 <!-- <div class="categoryitem" onclick="location.href='category.html'"> -->
                                 <div class="categoryitem">
                                     <div class="categoryimg">
-                                        <img src="assets/images/cricket.jpg" alt="">
+                                        <img src="{{url('events/sports/'.$data->image)}}" alt="">
                                     </div>
 
                                     <div class="categoryname">
-                                        <p class="mb-1">Cricket</p>
+                                        <p class="mb-1">{{$data->sport_name}}</p>
                                     </div>
                                 </div>
                                 <div class="categoryactions">
@@ -102,11 +104,15 @@
                                 </div>
                             </div>
 
-                            <div class="categoryitemcont">
+                            @empty
+                                
+                            @endforelse
+
+                            {{-- <div class="categoryitemcont">
                                 <!-- <div class="categoryitem" onclick="location.href='category.html'"> -->
                                     <div class="categoryitem" >
                                     <div class="categoryimg">
-                                        <img src="assets/images/football2.jpg" alt="">
+                                        <img src="/images/Main-Sports/football2.jpg" alt="">
                                     </div>
 
                                     <div class="categoryname">
@@ -133,7 +139,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -172,6 +178,8 @@
 
 
     <!-- add category modal starts -->
+    <form action="{{route('tournament.store')}}" method="post" enctype="multipart/form-data">
+        @csrf
     <div class="modal fade" id="addcategorymodal" tabindex="-1" aria-labelledby="addcategorymodalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -182,15 +190,28 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="formFileSm" class="form-label">Upload Tournament Image</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        <label for="formFileSm" class="form-label">Upload Tournament Banner</label>
+                        <input name="image" required class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Tournament
                             Name</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
+                        <input type="text" required name="sport" class="form-control form-control-sm" id="exampleFormControlInput1">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Event Date</label>
+                        <input type="date" name="event_date" required class="form-control form-control-sm" id="exampleFormControlInput1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Tournament
+                            Description</label>
+                        <input type="text" name="description" class="form-control form-control-sm" id="exampleFormControlInput1">
+                    </div>
+                    
+                  
 
                     
 
@@ -201,15 +222,16 @@
                     </div> -->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn bluebg btn-sm">Add/Save Tournament</button>
+                    <button type="submit" class="btn bluebg btn-sm">Add/Save Tournament</button>
                 </div>
             </div>
         </div>
     </div>
+</form>
     <!-- add category modal ends -->
 
     <!-- edit category modal starts -->
-    <div class="modal fade" id="editcategorymodal" tabindex="-1" aria-labelledby="editcategorymodalLabel"
+    {{-- <div class="modal fade" id="editcategorymodal" tabindex="-1" aria-labelledby="editcategorymodalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -241,7 +263,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- add category modal ends -->
 
     <!--modal for delete product starts -->

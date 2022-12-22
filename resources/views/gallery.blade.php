@@ -1,4 +1,4 @@
-@extends('layout.MainLayout',['parallax'=>false])
+@extends('layout.MainLayout',['parallax'=>true])
 @section('current','Gallery')
 
 @push('css')
@@ -52,13 +52,32 @@
                                     </ul>
                                 </div> -->
 
+
+ 
         <div class="portfolio-item row">
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                    <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/EE668XA8sef4CufECLmi3Hx9SLdbQGaUQmkw4hUv.png" class="fancylight popup-btn" data-fancybox-group="light">
-                        <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/EE668XA8sef4CufECLmi3Hx9SLdbQGaUQmkw4hUv.png" alt="">
+            @forelse ($imageData as $image)
+            
+           
+                
+            
+         
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="{{ url('album/'.$image->image) }}" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="{{ url('album/'.$image->image) }}" alt="">
                     </a>
                 </div>
-                            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+              
+                @empty
+                
+         @endforelse
+
+
+        </div>
+
+        </div>
+        
+        
+                            {{-- <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
                     <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/F3MKOcZ3HJEwYd30dHMpcTCQVU2UNNpGf0Y5VQgu.jpg" class="fancylight popup-btn" data-fancybox-group="light">
                         <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/F3MKOcZ3HJEwYd30dHMpcTCQVU2UNNpGf0Y5VQgu.jpg" alt="">
                     </a>
@@ -152,12 +171,9 @@
                     <a href="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/rcdWNSPShYnhnmug2QPydTHC31iw1GSWrxsXhBdl.jpg" class="fancylight popup-btn" data-fancybox-group="light">
                         <img class="img-fluid" src="https://alumni.jnec.org//storage//albums/Alumni Pre-meet Delhi/rcdWNSPShYnhnmug2QPydTHC31iw1GSWrxsXhBdl.jpg" alt="">
                     </a>
-                </div>
-                    </div>
-
-
-
-    </div>
+                </div> 
+                    </div>--}}
+    
     <!-- photo gallery ends -->
 
     <script>

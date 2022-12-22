@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\achievements;
+use App\Models\album;
+use App\Models\Tournaments;
 use Illuminate\Http\Request;
 
 class routeController extends Controller
@@ -10,7 +13,8 @@ class routeController extends Controller
 
     public function loadHome()
     {
-        return view('welcome');
+        $imageData=Tournaments::all();
+        return view('welcome', compact('imageData'));
     }
 
     public function loadFacilities()
@@ -20,7 +24,9 @@ class routeController extends Controller
 
     public function loadAchievements()
     {
-        return view('achievements');
+       $events=achievements::all();
+       
+        return view('achievements',compact('events'));
     }
 
     public function loadContact()
@@ -30,7 +36,8 @@ class routeController extends Controller
 
     public function loadGallery()
     {
-        return view('gallery');
+        $imageData=album::all();
+        return view('gallery',compact('imageData'));
     }
 
     public function login()
@@ -54,16 +61,16 @@ class routeController extends Controller
     }
 
 
-    public function adtournament()
-    {
-        return view('admin/tournament');
-    }
+    // public function adtournament()
+    // {
+    //     return view('admin/tournament');
+    // }
 
 
-    public function adgallery()
-    {
-        return view('admin/gallery');
-    }
+    // public function adgallery()
+    // {
+    //     return view('admin/gallery');
+    // }
 
 
     public function adfaq()
@@ -77,7 +84,7 @@ class routeController extends Controller
         return view('admin/seeparticipate');
     }
 
-    public function adachivement()
+    public function adachievement()
     {
         return view('admin/achivements');
     }

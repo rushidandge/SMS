@@ -63,7 +63,10 @@
 
     <!-- table -->
     <div id="alldatatable" class="bg-white mt-2">
-        <table class="table table-bordered">
+        
+        {{-- $gallery=DB::table('galleries')->select('id','name','image_path',)->get(); --}}
+      
+       <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Image No</th>
@@ -73,16 +76,18 @@
                 </tr>
             </thead>
             <tbody>
+               
+                @foreach($imageData as $data)
                 <tr>
-                    <td>12345</td>
+                    <td>{{ $data->id }}</td>
                     <td class="col-md-2">
                         <div class="tablecellwidthbq">
-                            <p class="mb-0">Full Brandname</p>
+                            <p class="mb-0">{{ $data->name }}</p>
                         </div>
                     </td>
                     <td>
                         <div class="brandlogoimg">
-                            <img src="assets/images/brand1.png" alt="">
+                            <img src="{{ url('album/'.$data->image) }}" alt="">
                         </div>
                     </td>
 
@@ -94,19 +99,22 @@
                                     edit
                                 </span>
                             </button> -->
-
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#deleteconfirmmodal">
+                            
+                             <form action="{{route("deletephoto")}}" method="post">
+                                @csrf
+                            <input type="hidden" name="id" value="{{ $data->id }}"/>
+                            <button type="submit" class="btn btn-danger btn-sm" >
                                 <span class="material-icons">
                                     delete
                                 </span>
                             </button>
+                        </form>
                         </div>
 
                     </td>
                 </tr>
 
-                <tr>
+                {{-- <tr>
                     <td>12345</td>
                     <td class="col-md-2">
                         <div class="tablecellwidthbq">
@@ -137,14 +145,10 @@
                         </div>
 
                     </td>
-                </tr>
-
+                </tr> --}}
+                 @endforeach 
             </tbody>
         </table>
-
-
-
-
     </div>
 
     <!-- pagination -->
@@ -176,25 +180,30 @@
     <div class="modal fade" id="addbrandmodal" tabindex="-1" aria-labelledby="addcategorymodalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                <form action="{{ route('images.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Image</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Image
                             Name</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
+                        <input type="text" class="form-control form-control-sm" name="name" required id="exampleFormControlInput1">
                     </div>
 
                     <div class="mb-3">
                         <label for="formFileSm" class="form-label">Upload Image</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        <input class="form-control form-control-sm" id="formFileSm" type="file" name="image" required> 
                     </div>
+                   
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn bluebg btn-sm">Add/Save Image</button>
+                    <button type="submit" class="btn bluebg btn-sm">Add/Save Image</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -233,7 +242,7 @@
 
 
     <!--modal for delete confirm starts -->
-    <div class="modal fade" id="deleteconfirmmodal" tabindex="-1" aria-labelledby="deleteconfirmmodalLabel"
+   <div class="modal fade" id="deleteconfirmmodal" tabindex="-1" aria-labelledby="deleteconfirmmodalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -254,7 +263,7 @@
 
             </div>
         </div>
-    </div>
+    </div> 
     <!--modal for delete confirm ends-->
 
 

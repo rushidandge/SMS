@@ -40,16 +40,19 @@
                     <div class="col">
 
                         <!-- Event -->
+                    @forelse ($events as $data)
+                        
+                   
                         <div class="event">
                             <div class="row row-lg-eq-height">
                                 <div class="col-lg-6 event_col">
                                     <div class="event_image_container">
-                                        <div class="background_image" style="background-image:url(images/event_9.jpg)"></div>
+                                        <div class="background_image" style="background-image:url({{url('events/'.$data->image)}})"></div>
                                         <div class="date_container">
                                             <a href="#">
                                                 <span class="date_content d-flex flex-column align-items-center justify-content-center">
-                                                    <div class="date_day">15</div>
-                                                    <div class="date_month">May</div>
+                                                    <div class="date_day">{{$data->date}}</div>
+                                                    {{-- <div class="date_month">May</div> --}}
                                                 </span>
                                             </a>
                                         </div>
@@ -57,10 +60,12 @@
                                 </div>
                                 <div class="col-lg-6 event_col">
                                     <div class="event_content">
-                                        <div class="event_title">Inter Departmental TOurnament </div>
-                                        <div class="event_location">@ MGM Gym</div>
+                                        <div class="event_title">{{$data->event_name}} </div>
+                                        <div class="event_location">{{$data->subtitle}}</div>
                                         <div class="event_text">
-                                            <p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accu msan molestie. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                                            <p>
+                                                {{$data->description}}
+                                            </p>
                                         </div>
                                         <div class="event_speakers">
                                             <!-- Event Speaker -->
@@ -69,13 +74,13 @@
                                                     <div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div>
                                                 </div>
                                                 <div class="event_speaker_content">
-                                                    <div class="event_speaker_name">Sir Arslan</div>
-                                                    <div class="event_speaker_title">supervisor</div>
+                                                    <div class="event_speaker_name">{{$data->author}}</div>
+                                                    <div class="event_speaker_title">Author</div>
 
                                                 </div>
                                             </div>
                                             <!-- Event Speaker -->
-                                            <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
+                                            {{-- <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
                                                 <div>
                                                     <div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div>
                                                 </div>
@@ -83,7 +88,7 @@
                                                     <div class="event_speaker_name">Ma'am Mamoona</div>
                                                     <div class="event_speaker_title">Co. SUpervisor </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="event_buttons">
                                             <div class="button event_button event_button_1"><a href="db-content/database.php">View Results !</a></div>
@@ -93,8 +98,10 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Event -->
+                        @empty
+                        
+                        @endforelse
+                        {{-- <!-- Event -->
                         <div class="event">
                             <div class="row row-lg-eq-height">
                                 <div class="col-lg-6 event_col">
@@ -200,7 +207,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
