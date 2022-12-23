@@ -95,12 +95,16 @@
                                         </span>
                                     </div>
 
-                                    <div class="categoryaction" data-bs-toggle="modal"
+                                    <form action="{{route("deletetournament")}}" method="post">
+                                        @csrf
+                                    <input type="hidden" name="id" value="{{ $data->id }}"/>
+                                    <button type="submit" class="categoryaction" data-bs-toggle="modal"
                                         data-bs-target="#deletecategorymodal">
                                         <span class="material-icons text-danger">
                                             delete
                                         </span>
-                                    </div>
+                                    </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -210,6 +214,15 @@
                             Description</label>
                         <input type="text" name="description" class="form-control form-control-sm" id="exampleFormControlInput1">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Sport type</label>
+                        <select class="form-control" name="is_team" required="required">
+                            <option value="0">Solo Sport</option>
+                            <option value="1">Team Sport</option>
+                        </select>
+                        {{-- <input type="text" name="description" class="form-control form-control-sm" id="exampleFormControlInput1"> --}}
+                    </div>
                     
                   
 
@@ -267,7 +280,7 @@
     <!-- add category modal ends -->
 
     <!--modal for delete product starts -->
-    <div class="modal fade" id="deletecategorymodal" tabindex="-1" aria-labelledby="deletecategorLabel"
+    {{-- <div class="modal fade" id="deletecategorymodal" tabindex="-1" aria-labelledby="deletecategorLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -288,7 +301,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--modal for delete product ends-->
 
 <!-- Page content ends-->

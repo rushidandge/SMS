@@ -34,7 +34,7 @@ Route::get('/adtournament',[tournamentController::class, 'viewTournament'])->nam
 // Route::get('/adgallery',[routeController::class, 'adgallery'])->name('adgallery');
 Route::get('/adfaq',[routeController::class, 'adfaq'])->name('adfaq');
 Route::get('/adpart',[routeController::class, 'adpart'])->name('adpart');
-Route::get('/adachievement',[routeController::class, 'adachievement'])->name('adachievement');
+// Route::get('/adachievement',[routeController::class, 'adachievement'])->name('adachievement');
 
 
 // Route::post('adphoto', [galleryController::class, 'addphoto']);
@@ -45,12 +45,12 @@ Route::post('/delete-image',[albumController::class, 'deletephoto'])->name('dele
 
 // achievement routes
 Route::post('/store-achievement',[achievementController::class,'addAchievement'])->name('achievement.store');
-
-
+Route::get('/adachievement',[achievementController::class, 'viewAchievement'])->name('adachievement');
+Route::post('/delete-achievement',[achievementController::class, 'deleteAchievement'])->name('achievement.delete');
 
 //tournament routes
 Route::post('/new-tournament',[tournamentController::class,'addTournament'])->name('tournament.store');
-
+Route::post('/delete-tournament',[tournamentController::class, 'deletetournament'])->name('deletetournament');
 
 
 Route::middleware([

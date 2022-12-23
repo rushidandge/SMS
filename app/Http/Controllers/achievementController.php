@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\achievements;
+use App\Models\Tournaments;
 use Illuminate\Http\Request;
 
 class achievementController extends Controller
 {
    //
+   function viewAchievement(){
+
+    $imageData= achievements::all();
+        return view('admin.achievements', compact('imageData'));
+   }
 
     function addAchievement(Request $request){
 
@@ -32,5 +38,16 @@ class achievementController extends Controller
     
          return redirect()->route('adachievement');
     }
+
+    function deleteAchievement(Request $id){
+
+        $data=achievements::find($id->id);
+        unlink("events/".$data->image);
+        achievements::where("id", $data->id)->delete();
+        // $data->delete();
+        return redirect('adachievement');
+    }
+
+
 
 }

@@ -21,6 +21,7 @@ class tournamentController extends Controller
         
         $data->sport_name=$request->get('sport');
         $data->event_date=$request->get('event_date');
+        $data->is_team=$request->get('is_team');
         
         
         $data->event_date=$request->get('event_date');
@@ -35,10 +36,19 @@ class tournamentController extends Controller
             
         }
         $data->save();
-        dd($data);
+       
     
          return redirect()->route('adtournament');
 
+
+    }
+
+    function deletetournament(Request $id){
+
+        $data=Tournaments::find($id->id);
+        unlink("events/sports/".$data->image);
+        Tournaments::where("id", $data->id)->delete();
+        return redirect('adtournament');
 
     }
 }

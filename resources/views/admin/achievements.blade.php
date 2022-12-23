@@ -72,25 +72,41 @@
                                     <th>Achievement ID</th>
                                     <th>Achievement Name</th>
                                     <th>Achievement Image</th>
+                                    <th>Date</th>
+                                    <th>author</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @forelse ($imageData as $data)
+                                    
+                               
                                 <tr>
-                                    <td>12345</td>
+                                    <td>{{$data->id}}</td>
                                     <td class="col-md-2">
                                         <div class="tablecellwidthbq">
-                                            <p class="mb-0">Win The State Level Kabdi</p>
+                                            <p class="mb-0">{{$data->event_name}}</p>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="brandlogoimg">
-                                            <img src="assets/images/brand1.png" alt="">
+                                            <img src="{{url('events/'.$data->image)}}" alt="">
+                                        </div>
+                                    </td>
+                                    <td class="col-md-2">
+                                        <div class="tablecellwidthbq">
+                                            <p class="mb-0">{{$data->author}}</p>
+                                        </div>
+                                    </td>
+                                    <td class="col-md-2">
+                                        <div class="tablecellwidthbq">
+                                            <p class="mb-0">{{$data->date}}</p>
                                         </div>
                                     </td>
 
                                     <td>
                                         <div class="d-flex">
+                                            
                                             <button class="btn bluebg btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#editbrandmodal">
                                                 <span class="material-icons">
@@ -98,18 +114,26 @@
                                                 </span>
                                             </button>
 
-                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+
+                                            <form action="{{route('achievement.delete') }} " method="POST">
+                                                @csrf
+                                             <input type="hidden" name="id" value="{{$data->id}}">   
+                                            <button type="submit" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#deleteconfirmmodal">
                                                 <span class="material-icons">
                                                     delete
                                                 </span>
                                             </button>
+                                        </form>
                                         </div>
 
                                     </td>
                                 </tr>
 
-                                <tr>
+                                @empty
+                                    
+                                @endforelse
+                                {{-- <tr>
                                     <td>12345</td>
                                     <td class="col-md-2">
                                         <div class="tablecellwidthbq">
@@ -140,7 +164,7 @@
                                         </div>
 
                                     </td>
-                                </tr>
+                                </tr> --}}
 
                             </tbody>
                         </table>
@@ -248,25 +272,43 @@
                     <h5 class="modal-title" id="exampleModalLabel">Edit Achievement</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+           <div class="modal-body">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Achievement
+                        <label for="exampleFormControlInput1" class="form-label" >Achievement
                             Name</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1"
-                            value="">
+                        <input type="text" required name="event_name" class="form-control form-control-sm" id="exampleFormControlInput1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Sub-title
+                            </label>
+                        <input type="text" required name="subtitle" class="form-control form-control-sm" id="exampleFormControlInput1">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Achievement
-                            Details</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
+                            Description</label>
+                        <input type="text" required name="description" class="form-control form-control-sm" id="exampleFormControlInput1">
                     </div>
 
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Author </label>
+                        <input type="text" required name="author" class="form-control form-control-sm" id="exampleFormControlInput1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Date</label>
+                        <input type="date" required name="date" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="DD/MM/YY">
+                    </div>
+
+                    
                     <div class="mb-3">
                         <label for="formFileSm" class="form-label">Upload Achievement
                             Image</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        <input name="image" required class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn bluebg btn-sm">Update Brand</button>
@@ -278,7 +320,7 @@
 
 
     <!--modal for delete confirm starts -->
-    <div class="modal fade" id="deleteconfirmmodal" tabindex="-1" aria-labelledby="deleteconfirmmodalLabel"
+    {{-- <div class="modal fade" id="deleteconfirmmodal" tabindex="-1" aria-labelledby="deleteconfirmmodalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -299,7 +341,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--modal for delete confirm ends-->
 
 @endsection

@@ -84,10 +84,10 @@ class routeController extends Controller
         return view('admin/seeparticipate');
     }
 
-    public function adachievement()
-    {
-        return view('admin/achivements');
-    }
+    // public function adachievement()
+    // {
+    //     return view('admin/achivements');
+    // }
 
 
 
