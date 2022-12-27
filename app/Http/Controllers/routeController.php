@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\achievements;
 use App\Models\album;
+use App\Models\Participants;
+use App\Models\soloparticipants;
+use App\Models\Teams;
 use App\Models\Tournaments;
 use Illuminate\Http\Request;
 
@@ -45,10 +48,20 @@ class routeController extends Controller
         return view('auth/login');
     }
 
-    public function registration()
-    {
-        return view('registration');
-    }
+    // public function regsolo($id)
+    // {
+    //     $info=Tournaments::find($id);
+    //     return view('registrationsolo', compact('info'));
+        
+    
+    // }
+
+    // public function regform($id){
+
+    //     $info=Tournaments::find($id);
+    //     return view('registration',compact('info'));
+    // }
+    
 
     public function register()
     {
@@ -81,7 +94,10 @@ class routeController extends Controller
 
     public function adpart()
     {
-        return view('admin/seeparticipate');
+
+        $playersolo  =soloparticipants::all();
+        $playerteam =Teams::all();
+        return view('admin/seeparticipate', compact('playersolo','playerteam'));
     }
 
     // public function adachievement()

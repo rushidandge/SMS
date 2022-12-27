@@ -29,8 +29,11 @@
 </head>
 
 <body>
-
-
+@php
+     $data=App\Models\Tournaments::where('id',$id)->get();
+@endphp
+    
+@forelse ($data as $item)  
 <div class="container-contact100" >
         <div class="contact100-map" id="google_map" data-map-x="25.407384" data-map-y="68.261887"
             data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
@@ -41,12 +44,16 @@
                     Register Now
                 </span>
 
-                <span class="contact100-form-title-2">
-                    Sports Week 2022
+    
+      
+        <span class="contact100-form-title-2">
+                {{$item->sport_name}}
                 </span>
-            </div>
 
-            <form class="contact100-form validate-form" action="insert.php" method="post">
+       </div>
+
+            <form class="contact100-form validate-form" action="{{route('addparticipantsolo')}}" method="post">
+                @csrf
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
                     <span class="label-input100">Full Name:</span>
                     <input class="input100" type="text" name="name" placeholder="Enter full name" id="lastName">
@@ -55,14 +62,14 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Prn is required">
                     <span class="label-input100">PRN No: </span>
-                    <input class="input100" type="number" name="regno" id="rollno" placeholder="EXAMPLE :: 1921321242087">
+                    <input class="input100" type="number" name="prn" id="rollno" placeholder="EXAMPLE :: 1921321242087">
 
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Phone is required">
                     <span class="label-input100">Mobile No</span>
-                    <input class="input100" type="number" name="mobno" id="mobno" placeholder="EXAMPLE ::+91 1234567890">
+                    <input class="input100" type="number" name="mobile" id="mobno" placeholder="EXAMPLE ::+91 1234567890">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -76,13 +83,9 @@
                     <!-- <label for="cars">Choose a sport</label> -->
                     <br>
                     <span class="label-input100" >Choose Sport</span>
-                    <select class="select-css" id="Sport" name="course" class="sports" >
-                        <option value="" disabled selected>Select Sport</option>
-                        <option value="1">Badminton Solo</option>
-                        <option value="2">Marathon Solo</option>
-                        <option value="3">Cycling</option>
-                        <option value="4">Table Tennis Solo</option>
-                        <option value="5">Boxing</option>
+                    <select class="select-css" id="Sport" name="sport_name" class="sports" >
+                        <option value="{{$item->sport_name}}" selected>{{$item->sport_name}}</option>
+                 
 
                     </select>
                 </div>
@@ -91,7 +94,7 @@
                     <!-- <label for="Depart">Choose Your Department</label> -->
                     <br>
                     <span class="label-input100">Choose Department</span>
-                    <select class="select-css" id="depart" name="depart" style="">
+                    <select class="select-css" id="depart" name="department" style="">
                         <option value="" disabled selected>Select Department</option>
                         <option value="cse">CSE</option>
                         <option value="it">IT</option>
@@ -112,10 +115,10 @@
                     
                     <select class="select-css" id="year" name="year" style="">
                         <option value="" disabled selected >Select Year</option>
-                        <option value="1st">1st</option>
-                        <option value="2nd">2nd</option>
-                        <option value="3rd">3rd</option>
-                        <option value="4th">4th (Final)</option>
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th (Final)</option>
                     </select>
                 </div>
 
@@ -152,7 +155,9 @@
         </div>
     </div>
 
-
+    @empty
+    
+    @endforelse   
 
 
     <div id="dropDownSelect1"></div>
@@ -213,5 +218,6 @@
         });
 
     </script>
+
 
 </body></html>

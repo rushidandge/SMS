@@ -51,4 +51,21 @@ class tournamentController extends Controller
         return redirect('adtournament');
 
     }
+
+
+    function registrationform(Request $id){
+        
+        $value=Tournaments::find($id->id);     
+   
+
+
+    if($value->is_team == 1){
+       return view('registration',$id);
+
+    }
+    else{
+        return view('registrationsolo',$id);
+    }
+
+    }
 }

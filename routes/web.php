@@ -6,6 +6,7 @@ use Spatie\FlareClient\View;
 use App\Http\Controllers\routeController;
 use App\Http\Controllers\albumController;
 use App\Http\Controllers\achievementController;
+use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\tournamentController;
 use App\Models\achievements;
 
@@ -26,7 +27,7 @@ Route::get('/contact', [routeController::class, 'loadContact'])->name('contact')
 Route::get('/achievements', [routeController::class, 'loadAchievements'])->name('achievements');
 Route::get('/gallery', [routeController::class, 'loadGallery'])->name('gallery');
 Route::get('/login', [routeController::class, 'login'])->name('login');
-Route::get('/registration', [routeController::class, 'registration'])->name('registration');
+// Route::get('/registration', [routeController::class, 'registration'])->name('registration');
 Route::get('/register',[routeController::class, 'register'])->name('register');
 
 Route::get('/admin',[routeController::class, 'admin'])->name('admin');
@@ -47,10 +48,28 @@ Route::post('/delete-image',[albumController::class, 'deletephoto'])->name('dele
 Route::post('/store-achievement',[achievementController::class,'addAchievement'])->name('achievement.store');
 Route::get('/adachievement',[achievementController::class, 'viewAchievement'])->name('adachievement');
 Route::post('/delete-achievement',[achievementController::class, 'deleteAchievement'])->name('achievement.delete');
-
+Route::post('/edit-achievements',[achievementController::class,'editAchievement'])->name('achievement.edit');
 //tournament routes
 Route::post('/new-tournament',[tournamentController::class,'addTournament'])->name('tournament.store');
 Route::post('/delete-tournament',[tournamentController::class, 'deletetournament'])->name('deletetournament');
+Route::get('reg-form',[tournamentController::class,'registrationform'])->name("registration");
+
+Route::get('regsolo/',[routeController::class,'regsolo'])->name('regsolo');
+// Route::get('regform',[routeController::class,'regform']);
+
+// participants
+
+Route::post('/register-solo',[ParticipantController::class, 'addParticipantSolo'])->name('addparticipantsolo');
+Route::post('/register-team',[ParticipantController::class, 'addTeam'])->name('addteam');
+
+Route::post('/delete-participant-solo',[ParticipantController::class, 'deleteParticipantSolo'])->name('delete.participant.solo');
+Route::post('/delete-participant-team',[ParticipantController::class, 'deleteParticipantTeam'])->name('delete.participant.team');
+
+
+// Route::get('show-participants/',[ParticipantController::class,'showParticipants'])->name('showparticipants');
+
+//
+
 
 
 Route::middleware([

@@ -49,13 +49,24 @@
 
 
 @section('content')
+
+
    <!-- Page content-->
    <div class="container-fluid">
+    
+    @php
+  $countTournament =App\Models\Tournaments::max('id');
+  $countPhotos =App\Models\album::max('id');
+  $countAchievements =App\Models\achievements::max('id');
+  $solo =App\Models\soloparticipants::max('id');
+  $team =App\Models\Participants::max('id');
+  $countParticipants =$solo+$team;
+@endphp
 
 <!-- dashboard starts -->
 <div id="dashboardboxes">
 
-  <div class="dbboxouter" onclick="location.href='allusers.html'">
+  <div class="dbboxouter" onclick="location.href='{{route('adtournament')}}'">
     <div class="dbbox">
       <div class="dbboxleft">
         <div class="dbicon">
@@ -66,10 +77,10 @@
       </div>
       <div class="dbboxright">
         <div class="dbboxcount">
-          <p class="mb-0">500</p>
+          <p class="mb-0">{{$countTournament}}</p>
         </div>
         <div class="dbboxname">
-          <p class="mb-0">Total Tornaments</p>
+          <p class="mb-0">Total Tournaments</p>
         </div>
       </div>
     </div>
@@ -81,7 +92,7 @@
     </div>
   </div>
 
-  <div class="dbboxouter" onclick="location.href='categories.html'">
+  <div class="dbboxouter" onclick="location.href='{{route('adpart')}}'">
     <div class="dbbox">
       <div class="dbboxleft">
         <div class="dbicon">
@@ -93,7 +104,7 @@
       </div>
       <div class="dbboxright">
         <div class="dbboxcount">
-          <p class="mb-0">1300</p>
+          <p class="mb-0">{{$countParticipants}}</p>
         </div>
         <div class="dbboxname">
           <p class="mb-0">Total Registartion</p>
@@ -108,7 +119,7 @@
     </div>
   </div>
 
-  <div class="dbboxouter" onclick="location.href='orders.html'">
+  <div class="dbboxouter" onclick="location.href='{{route('adgallery')}}'">
     <div class="dbbox">
       <div class="dbboxleft">
         <div class="dbicon">
@@ -119,7 +130,7 @@
       </div>
       <div class="dbboxright">
         <div class="dbboxcount">
-          <p class="mb-0">1000</p>
+          <p class="mb-0">{{$countPhotos}}</p>
         </div>
         <div class="dbboxname">
           <p class="mb-0">Total Photos</p>
@@ -134,7 +145,7 @@
     </div>
   </div>
 
-  <div class="dbboxouter" onclick="location.href='quoterequests.html'">
+  <div class="dbboxouter" onclick="location.href='{{route('adachievement')}}'">
     <div class="dbbox">
       <div class="dbboxleft">
         <div class="dbicon">
@@ -145,10 +156,10 @@
       </div>
       <div class="dbboxright">
         <div class="dbboxcount">
-          <p class="mb-0">50</p>
+          <p class="mb-0">{{$countAchievements}}</p>
         </div>
         <div class="dbboxname">
-          <p class="mb-0">FAQ Count</p>
+          <p class="mb-0">Total Achievements</p>
         </div>
       </div>
     </div>

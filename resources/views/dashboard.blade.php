@@ -104,11 +104,14 @@
          
 
 
-          <li>
+          {{-- <li>
             <a href="{{route('adfaq')}}" class="nav-link">
               FAQ
             </a>
-          </li> 
+          </li>  --}}
+
+
+          
 
           <!-- <li>
             <a href="orders.html" class="nav-link">

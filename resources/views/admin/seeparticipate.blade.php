@@ -46,11 +46,26 @@
 
 
                     <div class="dataaddactions mb-4">
+                       
+                       
+                       
+                           
+                       
+                            {{-- <div class="d-flex">
 
-                        <div class="addcategorybtns">
-                            <button class="btn bluebg btn-sm" data-bs-toggle="modal" data-bs-target="#addcitymodal">+
-                                Add Participation</button>
-                        </div>
+                            <input type="hidden" name="id" value="team">
+                            <button type="submit" class="btn bluebg btn-sm" data-bs-toggle="modal" data-bs-target="#addcitymodal">
+                                Team Sports</button>
+                        </div></form>
+                        <form action="{{route('showparticipants',['solo'])}}" method="post">
+                            @csrf
+                        <div class="d-flex">
+                            <input type="hidden" name="id" value="solo">
+                            <button type="submit" class="btn bluebg btn-sm" data-bs-toggle="modal" data-bs-target="#addcitymodal">
+                                Solo Sports</button>
+                        </div></form> --}}
+              
+
                         <!-- searchbar -->
                         <div id="datasearchbar" class="input-group mt-3 mb-3">
                             <input type="text" class="form-control" placeholder="Search Cities"
@@ -68,39 +83,214 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>PRN NO</th>
-                                    <th>Name</th>
-                                    <th>Sports Type</th>
-                                    <th>Sports Code</th>
+                                    <th>Index</th>
+                                    <th>Tournament Name</th>
+                                    <th>Team Name</th>
+                                    <th>Captain Name</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Yash Chutake</td>
-                                    <td>Cricket</td>
-                                    <td>10</td>
+                       
+                       
+
+                        
+                        <tbody>
+                                 @forelse ($playerteam as $data )
+                                 
+                                    <tr>
+                                    <td>{{$data->id}}</td>
+                                    <td>{{$data->sport}}</td>
+                                    <td>{{$data->team_name}}</td>
+                                    <td>{{$data->captain_name}}</td>
                                     <td>
                                         <div class="d-flex">
-                                            <button class="btn bluebg btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#editcitymodal">
+                                            <button class="btn orangebg btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#viewusermodal">
                                                 <span class="material-icons">
-                                                    edit
+                                                    visibility
                                                 </span>
                                             </button>
 
+                                            <form action="{{route('delete.participant.team')}}" method="post">
+                                                @csrf
+                                            <input type="hidden" name="id" value="{{$data->id}}">
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#deleteconfirmmodal">
                                                 <span class="material-icons">
                                                     delete
                                                 </span>
                                             </button>
+                                        </form>
                                         </div>
 
                                     </td>
                                 </tr>
-                                <tr>
+
+                                <div class="modal fade" id="viewusermodal" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Edit Participation</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Name of Tournament
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->sport}}" class="form-control form-control-sm" id="exampleFormControlInput1"
+                                                        >
+                                                </div>
+                            
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Team Name
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->team_name}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Captain name
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->captain_name}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Dapartment
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->department}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Year
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->year}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        email
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->email}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1"  class="form-label">
+                                                        Mobile No
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$data->mobile}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                
+                   @php
+                       $teammember=App\Models\Participants::where('team_id',$data->id)->get();
+                   @endphp                             
+
+                   @forelse ($teammember as $player)
+                       
+                   
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 1
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name1}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 2
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name2}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 3
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name3}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 4
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name4}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 5
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name5}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 6
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name6}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 7
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name7}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 8
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name8}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 9
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name9}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 10
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name10}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Player 11
+                                                    </label>
+                                                    <input type="text" readonly name="" value="{{$player->name11}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+
+                                                @empty
+                       
+                                                @endforelse
+                                                <!-- <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">City
+                                                        Name</label>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>Aurangabad</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div> -->
+                                                {{-- <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Sport Code
+                                                    </label>
+                                                    <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1"
+                                                       >
+                                                </div> --}}
+                            
+                                            </div>
+                                            {{-- <div class="modal-footer">
+                                                <button type="button" class="btn bluebg btn-sm">Update Information</button>
+                                            </div> --}}
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                                 @empty
+                           
+                                @endforelse
+
+
+
+                                {{-- <tr>
                                     <td>2</td>
                                     <td>Rushikesh Dandge</td>
                                     <td>FootBall</td>
@@ -123,32 +313,107 @@
                                         </div>
 
                                     </td>
-                                </tr>
+                                </tr> --}}
+
+                                @forelse ($playersolo as $data)
+                                    
                                 <tr>
-                                    <td>32</td>
-                                    <td>Rohit K</td>
-                                    <td>Table Tennis</td>
-                                    <td>52</td>
+                                    <td>{{$data->id}}</td>
+                                    <td>{{$data->sport_name}}</td>
+                                    <td>Solo</td>
+                                    <td>{{$data->name}}</td>
                                     <td>
                                         <div class="d-flex">
-                                            <button class="btn bluebg btn-sm" data-bs-toggle="modal"
+                                            <button class="btn orangebg btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#editcitymodal">
                                                 <span class="material-icons">
-                                                    edit
+                                                    visibility
                                                 </span>
                                             </button>
 
-                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+
+                                            <form action="{{route('delete.participant.solo')}}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{$data->id}}">
+                                            <button type="submit" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#deleteconfirmmodal">
                                                 <span class="material-icons">
                                                     delete
                                                 </span>
                                             </button>
+                                            </form>
                                         </div>
 
                                     </td>
                                 </tr>
-                            </tbody>
+
+                                <div class="modal fade" id="editcitymodal" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">View Details</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                            
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Name of Tournament
+                                                    </label>
+                                                    <input type="text" readonly value="{{$data->sport_name}}" class="form-control form-control-sm" id="exampleFormControlInput1"
+                                                        >
+                                                </div>
+                            
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                     name
+                                                    </label>
+                                                    <input type="text" readonly value="{{$data->name}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        PRN No.
+                                                    </label>
+                                                    <input type="text" readonly value="{{$data->prn}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Dapartment
+                                                    </label>
+                                                    <input type="text" readonly  value="{{$data->department}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Year
+                                                    </label>
+                                                    <input type="text" readonly value="{{$data->year}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        email
+                                                    </label>
+                                                    <input type="text" readonly value="{{$data->email}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Mobile No
+                                                    </label>
+                                                    <input type="text" readonly value="{{$data->mobile}}" class="form-control form-control-sm" id="exampleFormControlInput1">
+                                                </div>
+                                            </div>
+                                            {{-- <div class="modal-footer">
+                                                <button type="button" class="btn bluebg btn-sm">Update Information</button>
+                                            </div> --}}
+                                        </div>
+                                    </div>
+                                </div>
+                                @empty
+                                    
+                                @endforelse
+                            </tbody> 
+                            
+                            
                         </table>
 
 
@@ -186,7 +451,7 @@
 
 
     <!-- add city modal starts -->
-    <div class="modal fade" id="addcitymodal" tabindex="-1" aria-labelledby="addcitymodalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="addcitymodal" tabindex="-1" aria-labelledby="addcitymodalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -227,12 +492,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- add city modal ends -->
 
 
     <!--modal for edit city starts -->
-    <div class="modal fade" id="editcitymodal" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="editcitymodal" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -301,12 +566,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--modal for edit city ends-->
 
 
     <!--modal for delete confirm starts -->
-    <div class="modal fade" id="deleteconfirmmodal" tabindex="-1" aria-labelledby="deleteconfirmmodalLabel"
+    {{-- <div class="modal fade" id="deleteconfirmmodal" tabindex="-1" aria-labelledby="deleteconfirmmodalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -327,6 +592,6 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--modal for delete confirm ends-->
 @endsection

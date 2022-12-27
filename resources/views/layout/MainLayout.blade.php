@@ -119,8 +119,8 @@
                                                 </nav>
                                                 <div class="header_extra ml-auto">
                                                     <a class="TA-login" href="/login">Teachers/Admin Login </a>
+                                                    <a class="TA-login" href="/register">Register </a>
                                                    
-
                                             </div>
                                         </div>
                                     </div>

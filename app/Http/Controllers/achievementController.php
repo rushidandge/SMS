@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\achievements;
-use App\Models\Tournaments;
+
 use Illuminate\Http\Request;
 
 class achievementController extends Controller
@@ -15,6 +15,34 @@ class achievementController extends Controller
         return view('admin.achievements', compact('imageData'));
    }
 
+   function editAchievement(Request $request){
+    // dd($request->all());
+    $data= achievements::find($request->id);
+
+
+
+    $data->event_name=$request->event_name;
+    $data->subtitle=$request->subtitle;
+    $data->author = $request->author; 
+    $data->date=$request->date;
+    $data->description=$request->description;
+
+    if ($request->file('image')) {
+        $file = $request->file('image');
+        $filename = date('YmdHi') . $file->getClientOriginalName();
+        $file->move(public_path('/events'), $filename);
+        
+        $data['image'] = $filename;
+        
+    }
+    $data->save();
+
+     return redirect()->route('adachievement');
+
+
+
+   }
+
     function addAchievement(Request $request){
 
         $data = new achievements;
@@ -22,7 +50,7 @@ class achievementController extends Controller
         
         $data->event_name=$request->get('event_name');
         $data->subtitle=$request->get('subtitle');
-        $data->author = $request->get('author');
+        $data->author = $request->get('author'); 
         $data->date=$request->get('date');
         $data->description=$request->get('description');
 

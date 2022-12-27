@@ -63,8 +63,12 @@
                         <div class="intro_title"><a href="{{ route('registration') }}">{{ $data->sport_name }}
                             </a></div>
                         <div class="intro_subtitle">{{ $data->description }}</div>
-                        <div class="intro_title"><a href="{{ route('registration') }}"> <b>Register Now</b></a>
+                        {{-- <form action="registrationform" method="POST">
+                            <input type="hidden" name="id" value="{{$data->id}}">
+                            @csrf --}}
+                        <div class="intro_title" ><a href="{{ route('registration',['id' => $data->id])}}">  <b>Register Now</b></a>
                         </div>
+                    </form>
                     </div>
                 </div> 
                   @empty

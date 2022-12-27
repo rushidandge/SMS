@@ -31,7 +31,11 @@
 </head>
 
 <body>
-
+@php
+     $data=App\Models\Tournaments::where('id',$id)->get();
+@endphp
+@forelse ($data as $item)
+    
 
 <div class="container-contact100" >
         <div class="contact100-map" id="google_map" data-map-x="25.407384" data-map-y="68.261887"
@@ -44,20 +48,23 @@
                 </span>
 
                 <span class="contact100-form-title-2">
-                    Sports Week 2022
+                    {{$item->sport_name}}
                 </span>
             </div>
 
-            <form class="contact100-form validate-form" action="insert.php" method="post">
+            <form class="contact100-form validate-form" action="{{route('addteam')}}" method="post" enctype="multipart/form-data">
+                @csrf
+
+                <input type="hidden" name="tournament" value="{{$item->id}}">
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
                     <span class="label-input100">Captain Full Name:</span>
-                    <input class="input100" type="text" name="name" placeholder="Enter full name" id="lastName">
+                    <input class="input100" type="text" name="captain_name" placeholder="Enter full name" id="lastName">
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="PRN is required">
                     <span class="label-input100">Captain PRN No: </span>
-                    <input class="input100" type="number" name="regno" id="rollno" placeholder="EXAMPLE :: 1921321242087">
+                    <input class="input100" type="number" name="prn" id="rollno" placeholder="EXAMPLE :: 1921321242087">
 
                     <span class="focus-input100"></span>
                 </div>
@@ -70,24 +77,19 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Phone is required">
                     <span class="label-input100">Captain Mobile No</span>
-                    <input class="input100" type="number" name="mobno" id="mobno" placeholder="EXAMPLE ::+91 1234567890">
+                    <input class="input100" type="number" name="mobile" id="mobno" placeholder="EXAMPLE ::+91 1234567890">
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Phone is required" >
                     <!-- <label for="cars">Choose a sport</label> -->
                     <br>
+                    
                     <span class="label-input100" >Choose Sport</span>
-                    <select class="select-css" id="Sport" name="course" class="sports" >
-                        <option value="" disabled selected>Select Sport</option>
-                        <option value="6">Cricket</option>
-                        <option value="7">Fooball</option>
-                        <option value="8">BasketBall</option>
-                        <option value="9">Table Tennis</option>
-                        <option value="10">Badminton</option>
-                        <option value="11">Tug Of War</option>
-                        <option value="12">Marathon</option>
-                        <option value="13">Volleyball</option>
+                    <select class="select-css" id="Sport" name="sport" value="{{$item->sport_name}}" class="sports" >
+                        <option value="{{$item->sport_name}}">{{$item->sport_name}}</option>
+                 
+                        
 
                     </select>
                 </div>
@@ -96,7 +98,7 @@
                     <!-- <label for="Depart">Choose Your Department</label> -->
                     <br>
                     <span class="label-input100">Choose Department</span>
-                    <select class="select-css" id="depart" name="depart" style="">
+                    <select class="select-css" id="depart" name="department" style="">
                         <option value="" disabled selected>Select Department</option>
                         <option value="cse">CSE</option>
                         <option value="it">IT</option>
@@ -127,17 +129,50 @@
                 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
                     <span class="label-input100">Team Name:</span>
-                    <input class="input100" type="text" name="name" placeholder="Name Of Team" id="lastName">
+                    <input class="input100" type="text" name="team_name" placeholder="Name Of Team" id="lastName">
                    
-                
+                </div>
+            
+                <div class="wrap-input100 validate-input" >
+                    <span class="label-input100">Team member name:</span>
+
+                    <input class="input100" type="text" name="name1" placeholder="Player 1 name" id="lastName">
                     
+                    <span></span>
+                    <input class="input100" type="text" name="name2" placeholder="Player 2 name" id="lastName">
+                                
+                
+                    <input class="input100" type="text" name="name3" placeholder="Player 3 name" id="lastName">
+                
+                
+                    <input class="input100" type="text" name="name4" placeholder="Player 4 name" id="lastName">
+                
+                
+                    <input class="input100" type="text" name="name5" placeholder="Player 5 name" id="lastName">
+                
+                
+                    <input class="input100" type="text" name="name6" placeholder="Player 6 name" id="lastName">
+                
+                
+                    <input class="input100" type="text" name="name7" placeholder="Player 7 name" id="lastName">
+                
+                
+                    <input class="input100" type="text" name="name8" placeholder="Player 8 name" id="lastName">
+                
+                
+                    <input class="input100" type="text" name="name9" placeholder="Player 9 name" id="lastName">
+                                
+                    <input class="input100" type="text" name="name10" placeholder="Player 10 name" id="lastName">
+
+                    <input class="input100" type="text" name="name11" placeholder="Player 11 name" id="lastName">
+                   
                 </div>
 
                 
                 
                 
                 
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                {{-- <div class="wrap-input100 validate-input" data-validate="Name is required">
                     <span class="label-input100">Information About Member:</span>
                     
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -154,7 +189,7 @@
                         
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
               
 
@@ -190,8 +225,10 @@
         </div>
     </div>
 
-
-
+    @empty
+    
+    @endforelse
+  
     <div id="dropDownSelect1"></div>
 
     <!--===============================================================================================-->
