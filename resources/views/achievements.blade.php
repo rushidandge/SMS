@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/events.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/events_responsive.css') }}">
 @endpush
-
+@section('title','Achievements')
 @section('content')
     {{-- <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/1-0.jpg"
         data-speed="0.8"></div> --}}

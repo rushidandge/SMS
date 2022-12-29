@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Contact</title>
+    <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Conference project">
@@ -208,10 +208,10 @@
 
 
 
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="contact.html">About Us</a></li>
-                                    <li><a href="facilities.html">Facitlities </a></li>
-                                    <li><a href="Achievements.php">Speakers</a></li>
+                                    <li><a href="{{route('home')}}">Home</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                    <li><a href="{{route('facilities')}}">Facitlities </a></li>
+                                    <li><a href="{{route('gallery')}}">Gallery</a></li>
 
 
                                 </ul>

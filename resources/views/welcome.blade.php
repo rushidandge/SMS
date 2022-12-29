@@ -1,4 +1,5 @@
 @extends('layout.MainLayout', ['parallax' => false])
+@section('title','Sports Management System')
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/bootstrap4/bootstrap.min.css') }}">
     <link href="{{ asset('asssets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css') }}">

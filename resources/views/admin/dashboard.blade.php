@@ -1,4 +1,5 @@
 @extends('dashboard')
+@section('title','Dashboard')
 
 @push('css')
  <link href="{{asset('assets/images/favicon.png')}}" rel="icon">

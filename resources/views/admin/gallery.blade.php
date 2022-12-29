@@ -1,4 +1,5 @@
 @extends('dashboard')
+@section('title','Admin')
 @section('content')
 <!-- Page content-->
  <!-- Page content-->

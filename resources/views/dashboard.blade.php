@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Sports Management</title>
+  <title>@yield('title')</title>
 
   <!-- Favicons -->
 
@@ -49,7 +49,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
 
-              <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+              <li><a class="dropdown-item" href="{{route('login')}}">Sign out</a></li>
             </ul>
           </div>
         </a>

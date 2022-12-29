@@ -12,7 +12,7 @@
 
 @endpush
     
-
+@section('title','Contact')
 @section('content')
 
         <!-- Contact -->

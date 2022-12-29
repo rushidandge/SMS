@@ -12,6 +12,7 @@
 
 @endpush
     
+@section('title','Facilities')
 
 @section('content')  
         
