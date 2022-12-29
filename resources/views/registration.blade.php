@@ -42,7 +42,7 @@
             data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 
         <div class="wrap-contact100">
-            <div class="contact100-form-title" style="background-image: url(images/reg\ bg.jpg);">
+            <div class="contact100-form-title" style="background-image: url(images/speakers.jpg);">
                 <span class="contact100-form-title-1">
                     Register Your Team Now
                 </span>
@@ -136,35 +136,35 @@
                 <div class="wrap-input100 validate-input" >
                     <span class="label-input100">Team member name:</span>
 
-                    <input class="input100" type="text" name="name1" placeholder="Player 1 name" id="lastName">
+                    <input class="input100" type="text" name="name1" placeholder="Player 1 name Or NA" id="lastName">
                     
                     <span></span>
-                    <input class="input100" type="text" name="name2" placeholder="Player 2 name" id="lastName">
+                    <input class="input100" type="text" name="name2" placeholder="Player 2 name Or NA" id="lastName">
                                 
                 
-                    <input class="input100" type="text" name="name3" placeholder="Player 3 name" id="lastName">
+                    <input class="input100" type="text" name="name3" placeholder="Player 3 name Or NA" id="lastName">
                 
                 
-                    <input class="input100" type="text" name="name4" placeholder="Player 4 name" id="lastName">
+                    <input class="input100" type="text" name="name4" placeholder="Player 4 name Or NA" id="lastName">
                 
                 
-                    <input class="input100" type="text" name="name5" placeholder="Player 5 name" id="lastName">
+                    <input class="input100" type="text" name="name5" placeholder="Player 5 name Or NA" id="lastName">
                 
                 
-                    <input class="input100" type="text" name="name6" placeholder="Player 6 name" id="lastName">
+                    <input class="input100" type="text" name="name6" placeholder="Player 6 name Or NA" id="lastName">
                 
                 
-                    <input class="input100" type="text" name="name7" placeholder="Player 7 name" id="lastName">
+                    <input class="input100" type="text" name="name7" placeholder="Player 7 name Or NA" id="lastName">
                 
                 
-                    <input class="input100" type="text" name="name8" placeholder="Player 8 name" id="lastName">
+                    <input class="input100" type="text" name="name8" placeholder="Player 8 name Or NA" id="lastName">
                 
                 
-                    <input class="input100" type="text" name="name9" placeholder="Player 9 name" id="lastName">
+                    <input class="input100" type="text" name="name9" placeholder="Player 9 name Or NA" id="lastName">
                                 
-                    <input class="input100" type="text" name="name10" placeholder="Player 10 name" id="lastName">
+                    <input class="input100" type="text" name="name10" placeholder="Player 10 name Or NA" id="lastName">
 
-                    <input class="input100" type="text" name="name11" placeholder="Player 11 name" id="lastName">
+                    <input class="input100" type="text" name="name11" placeholder="Player 11 name Or NA" id="lastName">
                    
                 </div>
 

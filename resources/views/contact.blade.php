@@ -42,12 +42,18 @@
                     <div class="col-lg-6">
                         <div class="contact_form_container">
                             <div class="contact_form_title">Ask Any Question</div>
-                            <form action="#" class="contact_form" id="contact_form">
-                                <input type="text" class="contact_input" placeholder="Name" required="required">
+                            <!-- <form action="#" class="contact_form" id="contact_form"> -->
+                            <form action="https://formsubmit.co/yashchutake07@gmail.com"  method="POST" class="contact_form" id="contact_form" class="yash">
+                                <input type="text" class="contact_input" name="name" required  placeholder="Name">
+                                <input type="email" class="contact_input" name="email" required placeholder="E-mail">
+                                <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Message" required="required"></textarea>
+                                <button class="button contact_button"><span>Submit</span></button> 
+                             
+                                <!-- <input type="text" class="contact_input" placeholder="Name" required="required">
                                 <input type="email" class="contact_input" placeholder="E-mail" required="required">
                                 <input type="text" class="contact_input" placeholder="Subject" required="required">
                                 <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Message" required="required"></textarea>
-                                <button class="button contact_button"><span>Submit</span></button>
+                                <button class="button contact_button"><span>Submit</span></button> -->
                             </form>
                         </div>
                     </div>
@@ -84,7 +90,7 @@
                                         <div>
                                             <div class="contact_info_icon text-center"><img src="images/contact_3.png" alt=""></div>
                                         </div>
-                                        <div class="contact_info_text">www.jnec.org</div>
+                                        <div class="contact_info_text">www.sportseventmangement.org</div>
                                     </li>
                                 </ul>
                             </div>

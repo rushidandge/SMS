@@ -69,7 +69,7 @@
 
                         <!-- searchbar -->
                         <div id="datasearchbar" class="input-group mt-3 mb-3">
-                            <input type="text" class="form-control" placeholder="Search Cities"
+                            <input type="text" class="form-control" placeholder="Search "
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn orangebg" type="button" id="button-addon2">
                                 <span class="material-icons">
@@ -106,7 +106,7 @@
                                     <td>
                                         <div class="d-flex">
                                             <button class="btn orangebg btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#viewusermodal">
+                                                data-bs-target="#viewusermodal{{$data->id}}">
                                                 <span class="material-icons">
                                                     visibility
                                                 </span>
@@ -127,7 +127,7 @@
                                     </td>
                                 </tr>
 
-                                <div class="modal fade" id="viewusermodal" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
+                                <div class="modal fade" id="viewusermodal{{$data->id}}" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -326,7 +326,7 @@
                                     <td>
                                         <div class="d-flex">
                                             <button class="btn orangebg btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#editcitymodal">
+                                                data-bs-target="#editcitymodal{{$data->id}}">
                                                 <span class="material-icons">
                                                     visibility
                                                 </span>
@@ -348,7 +348,7 @@
                                     </td>
                                 </tr>
 
-                                <div class="modal fade" id="editcitymodal" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
+                                <div class="modal fade" id="editcitymodal{{$data->id}}" tabindex="-1" aria-labelledby="editcitymodalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">

@@ -39,7 +39,7 @@
             data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 
         <div class="wrap-contact100">
-            <div class="contact100-form-title" style="background-image: url(images/reg\ bg.jpg);">
+            <div class="contact100-form-title" style="background-image: url(images/speakers.jpg);">
                 <span class="contact100-form-title-1">
                     Register Now
                 </span>

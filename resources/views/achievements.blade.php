@@ -71,7 +71,7 @@
                                             <!-- Event Speaker -->
                                             <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
                                                 <div>
-                                                    <div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div>
+                                                    <div class="event_speaker_image"><img src="images/dp.png" alt=""></div>
                                                 </div>
                                                 <div class="event_speaker_content">
                                                     <div class="event_speaker_name">{{$data->author}}</div>
@@ -90,10 +90,10 @@
                                                 </div>
                                             </div> --}}
                                         </div>
-                                        <div class="event_buttons">
+                                        <!-- <div class="event_buttons">
                                             <div class="button event_button event_button_1"><a href="db-content/database.php">View Results !</a></div>
                                             <div class="button_2 event_button event_button_2"><a href="download/inter%20departmental.pdf" download>Download</a></div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
